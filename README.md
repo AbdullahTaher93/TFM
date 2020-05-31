@@ -18,4 +18,4 @@ Cryptanalysis is the technique of extracting useful information about the key by
 ## Cryptanalysis
 Cryptanalysis are the basic techniques on block cipher and till today, many cryptanalytic attacks are developed based on these. The cryptanalysis return cipher text to clear text  (or original text) by different methods to find the decryption  key, in other words, cryptanalysis is a method to reveal the key by the Receiver to transform cipher text to plaintext (or original text)
 
-![Cryptanalysis](https://github.com/AbdullahTaher93/TFM/images/Cryptanalysis.png)
+![Cryptanalysis](https://github.com/AbdullahTaher93/TFM/blob/master/images/Cryptanalysis.png)
