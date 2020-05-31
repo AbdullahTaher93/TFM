@@ -11,4 +11,11 @@ Cryptanalysis is the technique of deriving the original message from the cipher 
 A symmetric key cipher, especially a stream cipher is assumed secure, if the computational capability required for breaking the cipher by best-known attack is greater than or equal to exhaustive key search. 
 Cryptanalysis is the science of making encrypted data unencrypted use convert cipher text to plaintext because cryptanalysis used to convert plaintext to cipher text and used cryptanalysis Return to plaintext or clear text or original text cryptanalysis is used to break codes by finding weaknesses. There are many techniques used in the cryptanalysis. This project used the genetics algorithm.
 
-The genetic algorithm is a search algorithm based on the mechanics of natural selection and natural genetics The genetic algorithm belongs to the family of evolutionary algorithms, along with genetic programming, Evolution strategies and evolutionary programming. The set of operators usually consists of mutation, crossover and selection
+The genetic algorithm is a search algorithm based on the mechanics of natural selection and natural genetics The genetic algorithm belongs to the family of evolutionary algorithms, along with genetic programming, Evolution strategies and evolutionary programming. The set of operators usually consists of mutation, crossover and selection,
+
+Cryptanalysis is the technique of extracting useful information about the key by observing the plaintext and cipher text using cryptanalysis   try to break the secrecy provided by the cipher. There is no fixed method for cryptanalysis and every cipher is a different challenge to the attacker and hence demands different insight to attack  In this chapter, explained the history of cryptanalysis, the technology of cryptanalysis, transposition cipher, and description genetics algorithm (GA).
+
+## Cryptanalysis
+Cryptanalysis are the basic techniques on block cipher and till today, many cryptanalytic attacks are developed based on these. The cryptanalysis return cipher text to clear text  (or original text) by different methods to find the decryption  key, in other words, cryptanalysis is a method to reveal the key by the Receiver to transform cipher text to plaintext (or original text)
+
+![Cryptanalysis](https://github.com/AbdullahTaher93/TFM/images/Cryptanalysis.png)
