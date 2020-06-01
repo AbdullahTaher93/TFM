@@ -20,7 +20,7 @@ Cryptanalysis are the basic techniques on block cipher and till today, many cryp
 
 ![Cryptanalysis](https://github.com/AbdullahTaher93/TFM/blob/master/images/Cryptanalysis.png)
 
-## mplementation
+## Implementation
 
 genetic algorithm (GA) can be used for  obtaining  the decryption key to break ciphertext and transfer ciphertext message to plaintext message (readable message). GA is a search tool to insure high probability of finding a solution by decreasing the amount of time in the key space searching. GA consists of many operations: Evaluation fitness, Selection, Crossover, and Mutation. In Figure below Flowchart of proposed method of cryptanalysis.
 
