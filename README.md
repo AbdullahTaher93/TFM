@@ -28,13 +28,17 @@ genetic algorithm (GA) can be used for  obtaining  the decryption key to break c
 
 
 ### 1- Initialization (Population)
-In initialization stage, generate a pool of random keys, when the length of the key is 6 digits  and the pool size is 12 keys. Also, The key condition is random and non-repetitive in each key. These keys are changeable  by the other stages of GA and the better one used in derivation the plaintext.
+In initialization stage, generate a pool of random keys, when the length of the key is N digits  and the pool size is M keys. Also, The key condition is random and non-repetitive in each key. These keys are changeable  by the other stages of GA and the better one used in derivation the plaintext.
 
 ### 2- Transposition Cipher
-The transposition cipher is rearranged (change position only) the characters in the message but not change the characters. Transposition cipher have a pool of keys and ciphertext  that rearranged the ciphertext (as explained in chapter two) for 12 times depended on the pool of keys. The output of transposition cipher saved in array of 12 locations called "plaintext_array".
+The transposition cipher is rearranged (change position only) the characters in the message but not change the characters. Transposition cipher have a pool of keys and ciphertext  that rearranged the ciphertext  for M times depended on the pool of keys. The output of transposition cipher saved in array of M locations we can called it  "plaintext_array".
+
+Example: Decipherment process by columner Transposition. Ciphertext: PORPRYCTAYGH, Key: 3 1 4 2,
+
+![Transposition](https://github.com/AbdullahTaher93/TFM/blob/master/images/Transposition.png)
 
 ### 3- Evaluation Fitness 
-Fitness is evaluated based on the biagrams (sequence of two letters) frequency in the decrypted cipher text and Trigrams (sequence of three letters) frequency in the decrypted cipher text. Table (3.1) and Table (3.2) illustrated the most popular biagrams and Trigrams  in English language. Triagrams and diagrams   are   computationally expensive the fitness calculation.  Fitness function is as shown below equation:
+Fitness is evaluated based on the biagrams (sequence of two letters) frequency in the decrypted cipher text and Trigrams (sequence of three letters) frequency in the decrypted cipher text. the tables below illustrated the most popular biagrams and Trigrams  in English language. Triagrams and diagrams   are   computationally expensive the fitness calculation.  Fitness function is as shown below equation:
 
      Fitness function= β. ∑| (K (bi, j) −D (bi, j))|+   γ. ∑| (K (ti, j) −D (ti, j))|
 
@@ -48,11 +52,11 @@ Where β and γ are a constant
 
 
 ### 4- Selection operation
-In this operation, selection (choosing) the best keys only. The best key which has the high value of fitness. In the proposed work select only six keys which have the high fitness.  To perform the selection operation nedded a sorting function to sort pool of keys from high fitness to low fitness.
+In this operation, selection (choosing) the best keys only. The best key which has the high value of fitness. In the proposed work select only M/2 keys which have the high fitness.  To perform the selection operation nedded a sorting function to sort pool of keys from high fitness to low fitness.
 
 
 ### 5- Crossover Operation
-In this operation, after selecting the best six keys by the selection operation, applying the crossover operation to obtain the remainder six keys. In the crossover operation, each key performs a crossover to obtain a new key with the condition non-primitive keys. After the crossover operation, a new pool of keys obtaining, these are called "new population".
+In this operation, after selecting the best M/2 keys by the selection operation, applying the crossover operation to obtain the remainder M/2 keys. In the crossover operation, each key performs a crossover to obtain a new key with the condition non-primitive keys. After the crossover operation, a new pool of keys obtaining, these are called "new population".
 
 ### 6- Mutation Operation 
 In this operation, applying the mutation operation for the new population.  To perform the mutation operation, two random numbers  generated  such as R1, and R2 representing  two positions in each key then swap between value of the position R1 and the value of the position R2.  Repeat this operation for all keys in the "new population" pool.
