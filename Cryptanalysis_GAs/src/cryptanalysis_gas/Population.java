@@ -49,7 +49,28 @@ public class Population {
     return ife; 
 } 
   
- 
+ private void check_row(int population[][]){ 
+    String[] num=new String[population.length]; 
+    for(int i=0;i<population.length;i++) 
+    { 
+        num[i]=""; 
+        for (int j=0;j<population[i].length;j++) 
+             
+           num[i]=num[i]+population[i][j]; 
+        for(int inew=0;inew<population.length;inew++) 
+            if(num[inew]==num[i]) 
+            { 
+                if(inew!=i) 
+               IF_KEY_EXIST(population,temp); 
+                else 
+                    inew++; 
+               break; 
+            } 
+   
+    }  
+}
+
+
 
  public void Printarray(int population[][])
 { 
