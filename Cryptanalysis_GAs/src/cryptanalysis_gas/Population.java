@@ -12,13 +12,13 @@ import java.util.Random;
  * @author Abdullah_PC
  */
 public class Population {
-    int population[][] =new int[12][6];
+    int population[][] ;
     int temp;
-    Population(){
-        
+    Population(int No_OF_keys,int length_OF_key){
+        population=new int[No_OF_keys][length_OF_key];
         IF_KEY_EXIST(population,temp);
         check_row(population);
-        Printarray(population);
+        Printarray();
     }
     
    private void IF_KEY_EXIST(int population[][],int temp){ 
@@ -72,7 +72,7 @@ public class Population {
 
 
 
- public void Printarray(int population[][])
+ public void Printarray()
 { 
   for(int i=0;i<population.length;i++) 
   { 

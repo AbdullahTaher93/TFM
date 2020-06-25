@@ -16,7 +16,7 @@ public class Cryptanalysis_GAs {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Population population=new Population();
+        Population population=new Population(12,6);
     }
     
 }
