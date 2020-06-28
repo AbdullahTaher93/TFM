@@ -32,6 +32,7 @@ public class PopulationTest {
     
     @Before
     public void setUp() {
+        
         poptest=new Population(12,6);
     }
     
@@ -44,7 +45,8 @@ public class PopulationTest {
      */
     @Test
     public void testPrintarray() {
-        System.out.println("Printarray");
+        System.out.println("Print Array of Keys, Number of keys= 12, length of each key= 6, ");
+
         
     }
     
