@@ -1,3 +1,11 @@
 language: java
-
-script: ant build
+addons:
+  apt:
+    packages:
+      - openjdk-8-jdk
+jdk:
+  - openjdk8
+before_install:
+    - sudo apt-get -qq update
+    # ant-optional is needed for ant junit
+    - sudo apt-get install ant-optional
