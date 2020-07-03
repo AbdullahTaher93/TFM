@@ -34,6 +34,7 @@ public class Transpostion {
                     }
      return carr;
  }  
+ //method to divid cipher text by lenght of key then change their posiotion by keys also
  public void change_position(int[][] Keys,String cipher){
      String cut="";
      for(int k=0;k<Keys.length;k++){
