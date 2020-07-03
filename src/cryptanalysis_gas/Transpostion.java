@@ -19,6 +19,8 @@ public class Transpostion {
          cipher=cipher+carr;
      System.out.println("Add the X To cipher text If Do Not Be Divisible By key's length-----> "+cipher);
      change_position(keys_Array, cipher);
+
+     print();
      
      
     }
@@ -70,6 +72,9 @@ public class Transpostion {
       ArrOfPlain[k]= ArrOfPlain[k]+array[i];
       }
      }
- 
+ public void print(){
+     for(int i=0;i<ArrOfPlain.length;i++)
+       System.out.println("Plaintexts="+ArrOfPlain[i]); 
+ }
 
 }
