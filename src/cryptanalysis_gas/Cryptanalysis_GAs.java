@@ -16,7 +16,8 @@ public class Cryptanalysis_GAs {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Population population=new Population(12,6);
+        Population population=new Population(14,8);
+        Transpostion transpostion=new Transpostion(population.population, "ciphertest");
     }
     
 }
