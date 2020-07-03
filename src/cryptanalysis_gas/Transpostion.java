@@ -18,6 +18,7 @@ public class Transpostion {
          String carr=check_if_lenNotDivid(keys_Array[0].length,cipher.length());
          cipher=cipher+carr;
      System.out.println("Add the X To cipher text If Do Not Be Divisible By key's length-----> "+cipher);
+     change_position(keys_Array, cipher);
      
      
     }
@@ -33,7 +34,41 @@ public class Transpostion {
                     }
      return carr;
  }  
- 
+ public void change_position(int[][] Keys,String cipher){
+     String cut="";
+     for(int k=0;k<Keys.length;k++){
+         ArrOfPlain[k]="";
+       for(int i=1;i<=cipher.length();i++)
+      {
+          cut=cut+cipher.charAt(i-1);
+          if(i%Keys[0].length==0)
+          {
+           SortByKey(Keys,cut,k);
+           cut="";
+          }       
+      }
+       if(cut!="")
+       {
+           SortByKey(Keys,cut,k);
+           cut ="";
+       }
+     }
+     
+ }
+ //method using to change the char's position
+ private void SortByKey(int a[][],String cut,int k){
+      
+      char array[]=new char[cut.length()];
+      for(int i=0;i<cut.length();i++)
+      {
+          array[a[k][i]-1]=cut.charAt(i);
+          
+          
+      }
+      for(int i=0;i<cut.length();i++){
+      ArrOfPlain[k]= ArrOfPlain[k]+array[i];
+      }
+     }
  
 
 }
