@@ -1,5 +1,8 @@
 
-https://travis-ci.org/AbdullahTaher93/TFM.svg?branch=master
+
+
+
+[![Build Status](https://travis-ci.org/AbdullahTaher93/TFM.svg?branch=master)](https://travis-ci.org/AbdullahTaher93/TFM) [![Language](https://img.shields.io/badge/laguage-java-green.svg)](https://www.java.com/)
 
 # Cryptanalysis Ciphertext Based Genetic Algorithms
 
