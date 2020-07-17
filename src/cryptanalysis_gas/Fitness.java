@@ -19,17 +19,63 @@ public class Fitness {
  int Threecharcount[][];
  double SumTwochar[];
  double SumThreechar[];
+ 
+ int CountOfSubTxTOf2=0;
+ int CountOfSubTxTOf3=0;
+ double fi[];
+ String sub_Of_TwoChars,sub_Of_ThreeChars="";
 
-    public Fitness(String[] Array_Of_PlainTest,int key[][]) {
+    public Fitness(String[] Array_Of_PlainText,int key[][]) {
         
-        Twocharcount=new int[Array_Of_PlainTest.length][Threechar.length];
-        Threecharcount=new int[Array_Of_PlainTest.length][Threechar.length];
-        SumTwochar=new double[Array_Of_PlainTest.length];
-        SumThreechar=new double[Array_Of_PlainTest.length];
+        Twocharcount=new int[Array_Of_PlainText.length][Twochar.length];
+        Threecharcount=new int[Array_Of_PlainText.length][Threechar.length];
+        SumTwochar=new double[Array_Of_PlainText.length];
+        SumThreechar=new double[Array_Of_PlainText.length];
+        fi=new double[Array_Of_PlainText.length];
+        
+        FitnessMethod( Array_Of_PlainText, key);
+        //fitnessequation(Array_Of_PlainText.length);
+       // print();
+        
+         
+        
+        
     }
-
+    private void FitnessMethod(String[] Array_Of_PlainText, int[][] key) {
+        //init 0 to arraies of count Twochars and Threechars
+        for(int i=0;i<Array_Of_PlainText.length;i++){
+        
+            for(int j=0;j<Twocharcount[i].length;j++)
+                   Twocharcount[i][j]=0;
+            for(int j=0;j<Threecharcount[i].length;j++)
+                      Threecharcount[i][j]=0;
+        
+    }
+      for(int k=0;k<Array_Of_PlainText.length;k++){
+        for(int i=0;i<Array_Of_PlainText[k].length()-1;i++)
+        {
+            if(k==0)
+                CountOfSubTxTOf2++;
+           sub_Of_TwoChars="";
+           sub_Of_TwoChars=sub_Of_TwoChars+Array_Of_PlainText[k].charAt(i)+Array_Of_PlainText[k].charAt(i+1);
+           //checktwoChars(sub_Of_TwoChars,k);
+        }
+    
+        for(int i=0;i<Array_Of_PlainText[k].length()-2;i++)
+        {
+            if(k==0)
+                CountOfSubTxTOf3++;
+            sub_Of_ThreeChars="";
+            sub_Of_ThreeChars=sub_Of_ThreeChars+Array_Of_PlainText[k].charAt(i)+Array_Of_PlainText[k].charAt(i+1)+Array_Of_PlainText[k].charAt(i+2);
+            //checkthreeChars(sub_Of_ThreeChars,k);
+        }
+    }
+       
+       
+    } 
     
     
+   
  
  
     
