@@ -34,8 +34,8 @@ public class Fitness {
         fi=new double[Array_Of_PlainText.length];
         
         FitnessMethod( Array_Of_PlainText, key);
-        //fitnessequation(Array_Of_PlainText.length);
-       // print();
+        ////fitnessequation(Array_Of_PlainText.length);
+        //print();
         
          
         
@@ -67,7 +67,7 @@ public class Fitness {
                 CountOfSubTxTOf3++;
             sub_Of_ThreeChars="";
             sub_Of_ThreeChars=sub_Of_ThreeChars+Array_Of_PlainText[k].charAt(i)+Array_Of_PlainText[k].charAt(i+1)+Array_Of_PlainText[k].charAt(i+2);
-            //checkthreeChars(sub_Of_ThreeChars,k);
+            checkthreeChars(sub_Of_ThreeChars,k);
         }
     }
        
@@ -92,8 +92,26 @@ public class Fitness {
                    Twocharcount[k][index]=Twocharcount[k][index]+1;
                }   
      }
+    private void  checkthreeChars(String ths,int k){
+        boolean flage=false;
+        int index=0;
+         for(int i=0;i<Threechar.length;i++){
+                if(ths.equalsIgnoreCase(Threechar[i]))
+                {
+                    flage=true;
+                    index=i;
+                    break;
+                }
+               }
+               if(flage==true)
+               {
+                   Threecharcount[k][index]=Threecharcount[k][index]+1;
+               }
+
+ }
+
+    
    
- 
  
     
 }
