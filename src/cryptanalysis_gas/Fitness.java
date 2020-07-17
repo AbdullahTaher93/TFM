@@ -34,8 +34,8 @@ public class Fitness {
         fi=new double[Array_Of_PlainText.length];
         
         FitnessMethod( Array_Of_PlainText, key);
-        ////fitnessequation(Array_Of_PlainText.length);
-        //print();
+        fitnessequation(Array_Of_PlainText.length);
+       //print();
         
          
         
@@ -111,7 +111,37 @@ public class Fitness {
  }
 
     
+    public void fitnessequation(int Array_Of_PlainTextLength){
+      double d=0;
+      for(int i=0;i<SumTwochar.length;i++)
+               SumTwochar[i]=0;
+      for(int i=0;i<SumThreechar.length;i++)
+          SumThreechar[i]=0;
+      
+      for(int i=0;i<Array_Of_PlainTextLength;i++){
+        for(int j=0;j<Twochar.length;j++)
+                if(Twocharcount[i][j]!=0)
+                {
+                 d=(double)(Twocharcount[i][j]/CountOfSubTxTOf2);
+                 SumTwochar[i]=SumTwochar[i]+TwoCharVale[j]-d;
+                }
+     }
+     for(int i=0;i<Array_Of_PlainTextLength;i++){
+        for(int j=0;j<Threechar.length;j++)
+                 if(Threecharcount[i][j]!=0)
+                 {
+                  d=(double)(Threecharcount[i][j]/CountOfSubTxTOf3);
+                  SumThreechar[i]=SumThreechar[i]+ThreeCharVale[j]-d;
+                 }
+          
+     }
+    for(int i=0;i<SumTwochar.length;i++){
+       fi[i]=(double)SumTwochar[i]+SumThreechar[i];
+    }
+        
+    }
    
+ 
  
     
 }
