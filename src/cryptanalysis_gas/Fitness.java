@@ -35,7 +35,7 @@ public class Fitness {
         
         FitnessMethod( Array_Of_PlainText, key);
         fitnessequation(Array_Of_PlainText.length);
-       //print();
+        print();
         
          
         
@@ -140,7 +140,21 @@ public class Fitness {
     }
         
     }
-   
+   public void print(){
+        System.out.print("Ti= "); 
+        for(int i=0;i<SumTwochar.length;i++)
+            System.out.print("("+SumTwochar[i]+") ");
+        //diطباعه مفوفه ال
+        System.out.print("\nDi= ");
+        for(int i=0;i<SumThreechar.length;i++)
+            System.out.print("("+SumThreechar[i]+") ");
+        System.out.println("\n                                      Fitness=Ti+Di               ");
+        System.out.print("Fitness= ");
+        //طباعه مصفوفه الفتنس//
+        for(int i=0;i<fi.length;i++)
+            System.out.print("("+fi[i]+") ");
+        System.out.println("");
+   } 
  
  
     
