@@ -58,7 +58,7 @@ public class Fitness {
                 CountOfSubTxTOf2++;
            sub_Of_TwoChars="";
            sub_Of_TwoChars=sub_Of_TwoChars+Array_Of_PlainText[k].charAt(i)+Array_Of_PlainText[k].charAt(i+1);
-           //checktwoChars(sub_Of_TwoChars,k);
+           checktwoChars(sub_Of_TwoChars,k);
         }
     
         for(int i=0;i<Array_Of_PlainText[k].length()-2;i++)
@@ -75,6 +75,23 @@ public class Fitness {
     } 
     
     
+    private void checktwoChars(String ts,int k){
+        boolean flage=false;
+        int index=0;
+        for(int i=0;i<Twochar.length;i++){
+                if(ts.equalsIgnoreCase(Twochar[i]))
+                {
+                    flage=true;
+                    index=i;
+
+                    break;
+                }
+               }
+               if(flage==true)
+               {
+                   Twocharcount[k][index]=Twocharcount[k][index]+1;
+               }   
+     }
    
  
  
