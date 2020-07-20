@@ -34,6 +34,7 @@ public class Selection {
               keywithsort[i][j]=Key[indexofkey[i]][j];   
          }
     Selection_Method(PlainText);
+    Print(Fitness,PlainText);
   }
 
     private void Shell_Sort(double[] Fitness, String[] PlainText) {
@@ -70,12 +71,33 @@ public class Selection {
       {
           for(int j=0;j<seleckey2.length;j++){
               seleckey[k][j]=keywithsort[i][j];
-          seleckey2[k][j]=keywithsort[i-seleckey2.length][j];
+              seleckey2[k][j]=keywithsort[i-seleckey2.length][j];
           }
           selecplain[k]=PlainText[i];
           selecplain2[k]=PlainText[i-seleckey2.length];
           k++;
       }
+    }
+
+    private void Print(double[] Fitness, String[] PlainText) {
+        System.out.print("\n(Key With sort) (Plain text with sort) (Fitness Array with Sort)\n");     
+       for(int i=Fitness.length-1;i>=0;i--){
+            for(int j=0;j<6;j++)
+            System.out.print(" "+keywithsort[i][j]+" ");
+            System.out.print("   "+PlainText[i]+" ");
+            System.out.print("           "+Fitness[i]+" ");
+            System.out.print("\n");
+            }
+       System.out.print("\n");
+       int k=Fitness.length-1;
+       for(int i=0;i<Fitness.length/2;i++){
+            for(int j=0;j<Fitness.length/2;j++)
+            System.out.print(" "+seleckey[i][j]+" ");
+            k--;
+            System.out.print("\n");
+             }
+       System.out.print("\n");
+            
     }
     
     

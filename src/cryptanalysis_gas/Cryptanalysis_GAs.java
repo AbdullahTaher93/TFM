@@ -19,6 +19,7 @@ public class Cryptanalysis_GAs {
         Population population=new Population(12,6);
         Transpostion transpostion=new Transpostion(population.population, "ciphertest");
         Fitness fitness=new Fitness(transpostion.ArrOfPlain, population.population);
+        Selection selection=new Selection(fitness.fi, transpostion.ArrOfPlain, population.population);
     }
     
 }
