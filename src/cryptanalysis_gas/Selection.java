@@ -28,7 +28,12 @@ public class Selection {
         indexofkey[i]=i; 
     
     Shell_Sort(Fitness,PlainText);
-    
+    for(int i=0;i<Key.length;i++)
+         {
+             for(int j=0;j<Key[i].length;j++)
+              keywithsort[i][j]=Key[indexofkey[i]][j];   
+         }
+    Selection_Method(PlainText);
   }
 
     private void Shell_Sort(double[] Fitness, String[] PlainText) {
@@ -57,6 +62,20 @@ public class Selection {
         }
       
    }
+    }
+
+    private void Selection_Method(String[] PlainText) {
+      int k=0;
+      for(int i=PlainText.length-1; i>=PlainText.length/2  ;i--)
+      {
+          for(int j=0;j<seleckey2.length;j++){
+              seleckey[k][j]=keywithsort[i][j];
+          seleckey2[k][j]=keywithsort[i-seleckey2.length][j];
+          }
+          selecplain[k]=PlainText[i];
+          selecplain2[k]=PlainText[i-seleckey2.length];
+          k++;
+      }
     }
     
     
