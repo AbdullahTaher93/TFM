@@ -11,12 +11,14 @@ package cryptanalysis_gas;
  */
 public class Selection {
     
-  int indexofkey[]=new int[12];
-  int keywithsort[][]=new int[12][6];  
-  int seleckey[][]=new int[6][6];
-  int seleckey2[][]=new int[6][6];
-  String selecplain[]=new String[6];
-  String selecplain2[]=new String[6];
+  int indexofkey[];
+  int keywithsort[][];  
+  int seleckey[][];
+  int seleckey2[][];
+  String selecplain[];
+  String selecplain2[];
+  
+  
   public Selection(double[] Fitness,String[] PlainText,int[][] Key) {
     indexofkey=new int[Key.length];
     keywithsort=new int[Key.length][Key[0].length];  
