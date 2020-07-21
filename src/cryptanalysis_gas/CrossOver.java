@@ -20,6 +20,7 @@ public class CrossOver {
     int temp[]=new int[3];
 
     public CrossOver(int SelectedKey[][],String SelectedPlainText[]) {
+        
         corssover=new int[SelectedKey.length][SelectedKey[0].length];
         Array_Of_PlainTest=new String[SelectedKey.length];
 
@@ -27,8 +28,35 @@ public class CrossOver {
         newpopulionPlaint=new String[SelectedKey.length*2];
 
          temp=new int[SelectedKey[0].length/2];
+         crossing(SelectedKey);
 
         }   
+
+    private void crossing(int[][] SelectedKey) {
+    
+        for(int i=0;i<SelectedKey.length;i++)
+             {
+            for(int j=0;j<SelectedKey[0].length/2;j++)
+                corssover[i][j]=SelectedKey[i][j];
+            for(int j=SelectedKey[0].length/2,k=0;j<SelectedKey.length;j++,k++)
+                temp[k]=SelectedKey[i][j];
+            exch(); 
+            for(int j=0,k=SelectedKey[0].length/2;j<temp.length;j++,k++)
+                 corssover[i][k]=temp[j];
+
+         }
+    }
+
+    private void exch() {
+    for(int i=1;i<temp.length;i++)
+       {
+          for(int j=i;j>0&&less(temp[j],temp[j-1]);j--)
+          es(j,j-1);
+       }    
+    }
+
+    private boolean less(Comparable v,Comparable w){return v.compareTo(w)<0;}
+    private void es(int i,int j){int t=temp[i];temp[i]=temp[j];temp[j]=t;}
 
 
 }
