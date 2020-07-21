@@ -29,6 +29,12 @@ public class CrossOver {
 
          temp=new int[SelectedKey[0].length/2];
          crossing(SelectedKey);
+         for(int i=0;i<SelectedKey.length;i++) 
+                {
+                Array_Of_PlainTest[i]="";
+                transpostion2(SelectedPlainText[i],i,corssover);
+                }
+         
 
         }   
 
@@ -57,6 +63,33 @@ public class CrossOver {
 
     private boolean less(Comparable v,Comparable w){return v.compareTo(w)<0;}
     private void es(int i,int j){int t=temp[i];temp[i]=temp[j];temp[j]=t;}
+
+    
+
+   
+    
+    private void transpostion2(String selected_plain,int count,int corssover[][]){
+    String cut=""; 
+    for(int i=1;i<=selected_plain.length();i++)
+      {
+          cut=cut+selected_plain.charAt(i-1);
+          if(i%corssover[0].length==0)
+            {
+            SortByKey(cut,count,corssover);
+            cut="";
+
+            } 
+    }
+}
+
+    private void SortByKey(String cut, int count, int[][] corssover) {
+        
+      String sbk="";
+      for(int i=0;i<cut.length();i++)
+                sbk=sbk+cut.charAt(corssover[count][i]-1);
+             
+             Array_Of_PlainTest[count]=Array_Of_PlainTest[count]+sbk;
+                }
 
 
 }
