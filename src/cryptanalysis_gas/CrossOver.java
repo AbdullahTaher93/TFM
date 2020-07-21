@@ -35,6 +35,9 @@ public class CrossOver {
                 transpostion2(SelectedPlainText[i],i,corssover);
                 }
          
+        marriage_keys(corssover,SelectedKey);
+        marriage_PlainText(Array_Of_PlainTest,SelectedPlainText);
+        print(SelectedPlainText); 
 
         }   
 
@@ -90,6 +93,35 @@ public class CrossOver {
              
              Array_Of_PlainTest[count]=Array_Of_PlainTest[count]+sbk;
                 }
+
+    private void marriage_keys(int[][] corssover, int[][] SelectedKey) {
+    for(int i=0;i<SelectedKey.length;i++){
+             {
+                 for(int j=0;j<SelectedKey[0].length;j++)
+                 {
+                     newpopulionKey[i][j]=SelectedKey[i][j];
+                     newpopulionKey[i+SelectedKey.length][j]=corssover[i][j];
+                 }
+
+             }
+        }   
+    }
+
+    private void marriage_PlainText(String[] Array_Of_PlainTest, String[] SelectedPlainText) {
+       for(int i=0;i<SelectedPlainText.length;i++){
+             {
+                 for(int j=0;j<SelectedPlainText.length;j++)
+                 {
+                     newpopulionPlaint[i]=SelectedPlainText[i];
+                     newpopulionPlaint[i+SelectedPlainText.length]=Array_Of_PlainTest[i];
+                 }
+             }
+         }
+    }
+
+    private void print(String[] SelectedPlainText) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
 
 }
