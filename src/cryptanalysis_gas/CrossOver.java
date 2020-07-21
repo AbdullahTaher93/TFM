@@ -119,9 +119,25 @@ public class CrossOver {
          }
     }
 
-    private void print(String[] SelectedPlainText) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-
+    public void print(String selecplain[]){
+        for(int i=0;i<corssover.length;i++)
+            {
+            for(int j=0;j<corssover[i].length;j++)
+            System.out.print(" "+corssover[i][j]+" ");
+            System.out.println();
+            }
+        System.out.println();
+        System.out.println("Final Table of keyes(New Population)");
+        System.out.println("-------------------------------------");
+        for(int i=0;i<newpopulionKey.length;i++)
+        {
+            for(int j=0;j<newpopulionKey[i].length;j++)
+            System.out.print(" "+newpopulionKey[i][j]+" ");
+            System.out.println();
+         }    
+        }
 }
+   
+
+
+
