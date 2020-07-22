@@ -11,6 +11,10 @@ package cryptanalysis_gas;
  */
 
 public class CrossOver {
+
+    public CrossOver() {
+    }
+    
     int  corssover[][];
     String Array_Of_PlainTest[];
 

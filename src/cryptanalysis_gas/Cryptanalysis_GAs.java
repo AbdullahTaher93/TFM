@@ -21,7 +21,7 @@ public class Cryptanalysis_GAs {
         Fitness fitness=new Fitness(transpostion.ArrOfPlain, population.population);
         Selection selection=new Selection(fitness.fi, transpostion.ArrOfPlain, population.population);
         CrossOver crossOver=new CrossOver(selection.seleckey, selection.selecplain);
-        
+        Mutation mutation=new Mutation(crossOver.newpopulionPlaint, crossOver.newpopulionKey);
     }
     
 }
