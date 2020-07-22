@@ -83,10 +83,10 @@ public class Mutation {
        for(int i=0;i<keys.length;i++){
            for(int j=0;j<keys[i].length;j++)
            {
-               System.out.print(Array_Of_Plain[i]+"     "+keys[i][j]+" ");
+               System.out.print(" "+keys[i][j]+" ");
            }
            key=keys;
-           System.out.println();
+           System.out.println(Array_Of_Plain[i]);
        }     
    }
  }   
