@@ -40,12 +40,44 @@ public class Mutation {
            
         }
         
-         
+         for(int i=0;i<keys.length;i++) 
+           {
+             Array_Of_Plain[i]="";
+             trans2(Plain_Text[i],i,keys);
+           }
          
         
         
     }
+    private void trans2(String selecplain,int count,int corssover[][]){
+    String cut=""; 
+    for(int i=1;i<=selecplain.length();i++)
+      {
+          cut=cut+selecplain.charAt(i-1);
+          if(i%corssover[0].length==0)
+          {
+              
+          SortByKey(cut,count,corssover);
+          
+          cut="";
+          
+          } 
+          
+      }
+    }
     
+    private void SortByKey(String cut,int count,int corssover[][]){
+     String sbk="";      
+     for(int i=0;i<cut.length();i++)
+     {
+         
+         sbk=sbk+cut.charAt(corssover[count][i]-1);
+     }
+     Array_Of_Plain[count]=Array_Of_Plain[count]+sbk;
+       
+    }
+    
+   
  }   
     
     
