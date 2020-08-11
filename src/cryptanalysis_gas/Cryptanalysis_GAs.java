@@ -19,7 +19,7 @@ public class Cryptanalysis_GAs {
     public static void main(String[] args) {
         // TODO code application logic here
         Population population=new Population(12,6);
-        String cipherText="txxtxe";
+        String cipherText="epyrcntnoi";
         Transpostion transpostion=new Transpostion(population.population, cipherText);
         Fitness fitness=new Fitness(transpostion.ArrOfPlain, population.population);
         Selection selection=new Selection(fitness.fi, transpostion.ArrOfPlain, population.population);

@@ -34,7 +34,21 @@ genetic algorithm (GA) can be used for  obtaining  the decryption key to break c
 
 
 ### 1- Initialization (Population)
-In initialization stage, generate a pool of random keys, when the length of the key is N digits  and the pool size is M keys. Also, The key condition is random and non-repetitive in each key. These keys are changeable  by the other stages of GA and the better one used in derivation the plaintext.
+Population is a subset of solutions in the current generation. It can also be defined as a set of chromosomes. There are several things to be kept in mind when dealing with GA population −
+
+* The diversity of the population should be maintained otherwise it might lead to premature convergence.
+
+* The population size should not be kept very large as it can cause a GA to slow down, while a smaller population might not be enough for a good mating pool. Therefore, an optimal population size needs to be decided by trial and error.
+
+The population is usually defined as a two dimensional array of – size population, size  x , chromosome size.
+
+There are two primary methods to initialize a population in a GA. They are −
+
+* Random Initialization − Populate the initial population with completely random solutions.
+
+* Heuristic initialization − Populate the initial population using a known heuristic for the problem
+
+So with our problem we will use the first method which is (Random Initialization) generate a pool of random keys (size population), when the length of the key is N digits (chromosome size)  and the pool size is M keys(size population). Also, The key condition is random and non-repetitive in each key. These keys are changeable  by the other stages of GA and the better one used in derivation the plaintext.
 
 ### 2- Transposition Cipher
 The transposition cipher is rearranged (change position only) the characters in the message but not change the characters. Transposition cipher have a pool of keys and ciphertext  that rearranged the ciphertext  for M times depended on the pool of keys. The output of transposition cipher saved in array of M locations we can called it  "plaintext_array".

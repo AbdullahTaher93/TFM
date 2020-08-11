@@ -32,7 +32,7 @@ public class Transpostion {
          String carr="";
          if(carry>0){
                 for(int i=carry;i< keys_length;i++)
-                    carr=carr+"x";
+                    carr=carr+" ";
                     }
      return carr;
  }  

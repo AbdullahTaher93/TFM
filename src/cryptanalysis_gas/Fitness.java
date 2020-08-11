@@ -10,10 +10,27 @@ package cryptanalysis_gas;
  * @author Abdullah_PC
  */
 public class Fitness {
- String [] Twochar={"TH","HE","IN","ER","AN","ED","EN","RE","NT","ON","OR"};
- double [] TwoCharVale={3.015,0.027,1.872,1.86,1.419,1.305,1.141,1.353,1.15,1.82,0.902};
- String [] Threechar={"THE","ING","AND","EEE","ION","FOR","REA","ONE"};
- double [] ThreeCharVale={2.032,0.747,0.667,0,0.277,0.306,1.189,0.19}; 
+    //{"TH","EN","NG","AT","AL","ED","IT","ND","AS","TO","IS","OR","HA","EA","ET","TI","SE","AR","OU","TE","OF"}
+    /*{2.71,1.13,0.89
+        HE,2.33,1.12,0.88
+        IN,2.03,1.08,0.88
+        ER,1.78,1.07,0.87
+        AN,1.61,1.07,0.86
+        RE,1.41,1.06,0.83
+        ES,1.32,1.00,0.76
+        ON,1.32,0.99,0.73
+        ST,1.25,0.98,0.72
+        NT,1.17,0.98,0.71,}*/
+String [] Twochar={"TH","EN","NG","HE","AT","AL","IN","ED","IT","ER","ND","AS","AN","TO","IS","RE","OR","HA","ES","EA","ET","ON","TI","SE","ST","AR","OU","NT","TE","OF"};
+double [] TwoCharVale={2.71,1.13,0.89,2.33,1.12,0.88,2.03,1.08,0.88,1.78,1.07,0.87,1.61,1.07,0.86,1.41,1.06,0.83,1.32,1.00,0.76,1.32,0.99,0.73,1.25,0.98,0.72,1.17,0.98,0.71};
+    //String [] Twochar={"TH","HE","IN","ER","AN","ED","EN","RE","NT","ON","OR"};
+
+ //double [] TwoCharVale={2.71,2.33,2.03,1.78,1.419,1.305,1.141,1.353,1.15,1.82,0.902};
+ 
+ String [] Threechar={"THE","ERE","HES","AND","TIO","VER","ING","TER","HIS","ENT","EST","OFT","ION","ERS","ITH","HER","ATI","FTH","FOR","HAT","STH","THA","ATE","OTH","NTH","ALL","RES","INT","ETH","ONT"};
+double [] ThreeCharVale={1.81,0.31,0.24,0.73,0.31,0.24,0.72,0.30,0.24,0.42,0.28,0.22,0.42,0.28,0.21,0.36,0.26,0.21,0.34,0.26,0.21,0.33,0.25,0.21,0.33,0.25,0.21,0.32,0.24,0.20};
+ //String [] Threechar={"THE","ING","AND","EEE","ION","FOR","REA","ONE"};
+ //double [] ThreeCharVale={2.032,0.747,0.667,0,0.277,0.306,1.189,0.19}; 
  
  int Twocharcount[][];
  int Threecharcount[][];
