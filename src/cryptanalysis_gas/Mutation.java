@@ -19,6 +19,7 @@ public class Mutation {
     int x=0,y=0;
 
     public Mutation(String Plain_Text[],int keys[][]) {
+        
          Array_Of_Plain=new String[Plain_Text.length];
          key=new int[keys.length][keys[0].length];
          cross=new CrossOver();
@@ -44,6 +45,7 @@ public class Mutation {
            {
              Array_Of_Plain[i]="";
              trans2(Plain_Text[i],i,keys);
+             
            }
          
          
@@ -51,7 +53,8 @@ public class Mutation {
         
     }
     private void trans2(String selecplain,int count,int corssover[][]){
-    String cut=""; 
+    String cut="";
+    
     for(int i=1;i<=selecplain.length();i++)
       {
           cut=cut+selecplain.charAt(i-1);
@@ -75,6 +78,7 @@ public class Mutation {
          sbk=sbk+cut.charAt(corssover[count][i]-1);
      }
      Array_Of_Plain[count]=Array_Of_Plain[count]+sbk;
+     
        
     }
     
@@ -84,9 +88,11 @@ public class Mutation {
            for(int j=0;j<keys[i].length;j++)
            {
                System.out.print(" "+keys[i][j]+" ");
+               
            }
            key=keys;
-           System.out.println(Array_Of_Plain[i]);
+           //System.out.println(Array_Of_Plain[i]);
+           System.out.println();
        }     
    }
  }   

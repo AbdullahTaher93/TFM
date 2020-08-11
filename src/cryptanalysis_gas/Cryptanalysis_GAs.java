@@ -18,12 +18,14 @@ public class Cryptanalysis_GAs {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Population population=new Population(16,8);
-        Transpostion transpostion=new Transpostion(population.population, "ciphertest");
+        Population population=new Population(12,6);
+        String cipherText="txxtxe";
+        Transpostion transpostion=new Transpostion(population.population, cipherText);
         Fitness fitness=new Fitness(transpostion.ArrOfPlain, population.population);
         Selection selection=new Selection(fitness.fi, transpostion.ArrOfPlain, population.population);
         CrossOver crossOver=new CrossOver(selection.seleckey, selection.selecplain);
         Mutation mutation=new Mutation(crossOver.newpopulionPlaint, crossOver.newpopulionKey);
+        
         System.out.println("Enter The Round Number=");
         Scanner in=new Scanner(System.in);
         int n=in.nextInt();
@@ -34,7 +36,7 @@ public class Cryptanalysis_GAs {
                         System.out.println("---------New Keys or  New populion-----------");
                         mutation.Print(crossOver.newpopulionKey);
                         System.out.println("***Fixed Period d With a Permutation Function Transposition Cipher***");
-                        Transpostion Tr=new Transpostion(mutation.key,"ciphertest");
+                        Transpostion Tr=new Transpostion(mutation.key,cipherText);
                         System.out.println("***Step Two From Genetics Algorithm Evaluation Fitness***");
                         Fitness fit=new Fitness(Tr.ArrOfPlain,mutation.key);
                         System.out.print("***Step Three From Genetic Algorithm Selection Operation Top 6***\n");

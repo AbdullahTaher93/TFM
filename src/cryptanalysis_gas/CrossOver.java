@@ -117,8 +117,11 @@ public class CrossOver {
                  for(int j=0;j<SelectedPlainText.length;j++)
                  {
                      newpopulionPlaint[i]=SelectedPlainText[i];
+                     
+            
                      newpopulionPlaint[i+SelectedPlainText.length]=Array_Of_PlainTest[i];
                  }
+                 
              }
          }
     }
@@ -137,8 +140,10 @@ public class CrossOver {
         {
             for(int j=0;j<newpopulionKey[i].length;j++)
             System.out.print(" "+newpopulionKey[i][j]+" ");
+            
             System.out.println();
-         }    
+         }  
+       
         }
 }
    

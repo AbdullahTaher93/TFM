@@ -64,6 +64,20 @@ In this operation, selection (choosing) the best keys only. The best key which h
 ### 5- Crossover Operation
 In this operation, after selecting the best M/2 keys by the selection operation, applying the crossover operation to obtain the remainder M/2 keys. In the crossover operation, each key performs a crossover to obtain a new key with the condition non-primitive keys. After the crossover operation, a new pool of keys obtaining, these are called "new population".
 
+#### 5.1 One Point Crossover
+In this one-point crossover, a random crossover point is selected and the tails of its two parents are swapped to get new off-springs.
+
+![one_point_crossover](https://github.com/AbdullahTaher93/TFM/blob/master/images/one_point_crossover.png)
+
+#### 5.2 Multi Point Crossover
+Multi point crossover is a generalization of the one-point crossover wherein alternating segments are swapped to get new off-springs.
+
+![multi_point_crossover](https://github.com/AbdullahTaher93/TFM/blob/master/images/multi_point_crossover.png)
+
+#### 5.3 Uniform Crossover
+In a uniform crossover, we don’t divide the chromosome into segments, rather we treat each gene separately. In this, we essentially flip a coin for each chromosome to decide whether or not it’ll be included in the off-spring. We can also bias the coin to one parent, to have more genetic material in the child from that parent.
+![uniform_crossover](https://github.com/AbdullahTaher93/TFM/blob/master/images/uniform_crossover.png)
+
 ### 6- Mutation Operation 
 In this operation, applying the mutation operation for the new population.  To perform the mutation operation, two random numbers  generated  such as R1, and R2 representing  two positions in each key then swap between value of the position R1 and the value of the position R2.  Repeat this operation for all keys in the "new population" pool.
 
