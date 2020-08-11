@@ -78,6 +78,18 @@ Multi point crossover is a generalization of the one-point crossover wherein alt
 In a uniform crossover, we don’t divide the chromosome into segments, rather we treat each gene separately. In this, we essentially flip a coin for each chromosome to decide whether or not it’ll be included in the off-spring. We can also bias the coin to one parent, to have more genetic material in the child from that parent.
 ![uniform_crossover](https://github.com/AbdullahTaher93/TFM/blob/master/images/uniform_crossover.png)
 
+#### 5.4 Davis’ Order Crossover (OX1)
+OX1 is used for permutation based crossovers with the intention of transmitting information about relative ordering to the off-springs. It works as follows −
+
+Create two random crossover points in the parent and copy the segment between them from the first parent to the first offspring.
+
+Now, starting from the second crossover point in the second parent, copy the remaining unused numbers from the second parent to the first child, wrapping around the list.
+
+Repeat for the second child with the parent’s role reversed.
+
+![david_order_crossover](https://github.com/AbdullahTaher93/TFM/blob/master/images/david_order_crossover.png)
+
+
 ### 6- Mutation Operation 
 In this operation, applying the mutation operation for the new population.  To perform the mutation operation, two random numbers  generated  such as R1, and R2 representing  two positions in each key then swap between value of the position R1 and the value of the position R2.  Repeat this operation for all keys in the "new population" pool.
 
