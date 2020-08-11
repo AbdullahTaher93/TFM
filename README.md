@@ -127,12 +127,12 @@ the first class to start is [Population.java](https://github.com/AbdullahTaher93
      No. of chromosomes is: 12
      length of chromosome is: 6 
      
-     ![Chros12_6](https://github.com/AbdullahTaher93/TFM/blob/master/images/Chros12_6.png)
+   ![Chros12_6](https://github.com/AbdullahTaher93/TFM/blob/master/images/Chros12_6.png)
 
      No. of chromosomes is: 16
      length of chromosome is: 8
 
-     ![Chros16_8](https://github.com/AbdullahTaher93/TFM/blob/master/images/Chros16_8.png)
+   ![Chros16_8](https://github.com/AbdullahTaher93/TFM/blob/master/images/Chros16_8.png)
 
 
 
