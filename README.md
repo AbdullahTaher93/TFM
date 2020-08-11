@@ -111,5 +111,29 @@ In this operation, applying the mutation operation for the new population.  To p
 In this operation, display the plaintext (clear text is unencrypted information) for storage or transmission after decrypted the ciphertext. Also, display the Round number that obtaining the plaintext from ciphertext.
 
 ## Programming
+### 1 Population Step
+the first class to start is [Population.java](https://github.com/AbdullahTaher93/TFM/blob/master/src/cryptanalysis_gas/Population.java) in this class we created the Population which represents a set of chromosomes and each chromosome has the same length so, Population class has one constructor  and many methods that follow:
 
-### 1 
+#### 1.1 Population Constructor 
+   Population(int No_OF_keys,int length_OF_key)
+   * No_OF_keys: No. of chromosomes
+   * length_OF_key: length of the chromosome
+   under this Constructor, we can call all of the methods to create our population and show it.
+   First method is [IF_KEY_EXIST](https://github.com/AbdullahTaher93/TFM/blob/5df7a0d35278b1491faf0b8c8891b0b6d2210aaf/Cryptanalysis_GAs/src/cryptanalysis_gas/Population.java#L24) this method will generates set of numbers between 1 and length of chromosome without repeat numbers (non-repetitive) and randomly, the method to ensure there are no duplicate number called [check](https://github.com/AbdullahTaher93/TFM/blob/5df7a0d35278b1491faf0b8c8891b0b6d2210aaf/Cryptanalysis_GAs/src/cryptanalysis_gas/Population.java#L41) which has to parameters array of numbers that saved before and new number which will save in same array, and return true or false (if this new number exist in array of number will return false in another case will return true and save it) after get more then 2 chromosomes we have to check if there are duplicate chromosomes this step done with this method which calls [check_row](https://github.com/AbdullahTaher93/TFM/blob/5df7a0d35278b1491faf0b8c8891b0b6d2210aaf/Cryptanalysis_GAs/src/cryptanalysis_gas/Population.java#L52) which receive all of chromosomes that saved before and new chromosome after that will compare between them to find if there are duplicated between these chromosomes, then will return false if there are no chromosomes duplicated and save it if not will repeat the step of creating new chromosome.
+
+   finally, we can call [Print](https://github.com/AbdullahTaher93/TFM/blob/5df7a0d35278b1491faf0b8c8891b0b6d2210aaf/Cryptanalysis_GAs/src/cryptanalysis_gas/Population.java#L75) method to show all of the chromosomes
+
+   ##### Experimental results
+     No. of chromosomes is: 12
+     length of chromosome is: 6 
+     
+     ![Chros12_6](https://github.com/AbdullahTaher93/TFM/blob/master/images/Chros12_6.png)
+
+     No. of chromosomes is: 16
+     length of chromosome is: 8
+
+     ![Chros16_8](https://github.com/AbdullahTaher93/TFM/blob/master/images/Chros16_8.png)
+
+
+
+
