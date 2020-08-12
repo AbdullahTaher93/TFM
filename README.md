@@ -53,7 +53,10 @@ So with our problem we will use the first method which is (Random Initialization
 ### 2- Transposition Cipher
 The transposition cipher is rearranged (change position only) the characters in the message but not change the characters. Transposition cipher have a pool of keys and ciphertext  that rearranged the ciphertext  for M times depended on the pool of keys. The output of transposition cipher saved in array of M locations we can called it  "plaintext_array".
 
-Example: Decipherment process by columner Transposition. Ciphertext: PORPRYCTAYGH, Key: 3 1 4 2,
+A simple transposition or permutation cipher works by breaking a message into fixed size blocks, and then permuting the characters within each block according to a fixed permutation, say P. The key to the transposition cipher is simply the permutation P. So, the transposition cipher has the property that the encrypted message contains all the characters that were in the plaintext message. In other words, the unigram statistics for the message are unchanged by the encryption process. The size of the permutation is known as the period. Let's consider an example of a transposition cipher with a period of ten 10, and a key P={7,10,4,2,8,1,5,9,6,3}. In this case, the message is broken into blocks of ten characters, and after encryption the seventh character in the block will be moved to position 1, the tenth moved character in the block will be moved to position 2, the forth is moved to position 3, the second to position 4, the eighth to position 5, the first to position 6, the fifth to the position 7, the ninth to the position 8, the sixth to the position 9 and the third to position 10.
+
+In  Table below shows the key and the encryption process of the previously described transposition cipher. It can be noticed that the random string "X" was appended to the end of the message to enforce a message length, which is a
+multiple of the block size.
 
 ![Transposition](https://github.com/AbdullahTaher93/TFM/blob/master/images/Transposition.png)
 
