@@ -76,6 +76,7 @@ public class Population {
 { 
   for(int i=0;i<population.length;i++) 
   { 
+        
         for(int j=0;j<population[i].length;j++) 
         System.out.print(population[i][j]+" "); 
         System.out.print("\n");   

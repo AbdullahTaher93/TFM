@@ -32,7 +32,7 @@ public class Transpostion {
          String carr="";
          if(carry>0){
                 for(int i=carry;i< keys_length;i++)
-                    carr=carr+" ";
+                    carr=carr+"X";
                     }
      return carr;
  }  
@@ -74,7 +74,7 @@ public class Transpostion {
      }
  public void print(){
      for(int i=0;i<ArrOfPlain.length;i++)
-       System.out.println("Plaintexts="+ArrOfPlain[i]); 
+       System.out.println("Plaintexts= "+ArrOfPlain[i]); 
  }
 
 }

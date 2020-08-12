@@ -56,7 +56,7 @@ The transposition cipher is rearranged (change position only) the characters in 
 A simple transposition or permutation cipher works by breaking a message into fixed size blocks, and then permuting the characters within each block according to a fixed permutation, say P. The key to the transposition cipher is simply the permutation P. So, the transposition cipher has the property that the encrypted message contains all the characters that were in the plaintext message. In other words, the unigram statistics for the message are unchanged by the encryption process. The size of the permutation is known as the period. Let's consider an example of a transposition cipher with a period of ten 10, and a key P={7,10,4,2,8,1,5,9,6,3}. In this case, the message is broken into blocks of ten characters, and after encryption the seventh character in the block will be moved to position 1, the tenth moved character in the block will be moved to position 2, the forth is moved to position 3, the second to position 4, the eighth to position 5, the first to position 6, the fifth to the position 7, the ninth to the position 8, the sixth to the position 9 and the third to position 10.
 
 In  Table below shows the key and the encryption process of the previously described transposition cipher. It can be noticed that the random string "X" was appended to the end of the message to enforce a message length, which is a
-multiple of the block size.
+multiple of the block size.It is also clear that thedecryption can be achieved by following the same process as encryption using the "inverse" of the encryption permutation. In this case the decryption key, P-1 is equal to {6,4,10,3,7,9,1,5, 8,2}. 
 
 ![Transposition](https://github.com/AbdullahTaher93/TFM/blob/master/images/Transposition.png)
 
@@ -117,7 +117,7 @@ In this operation, display the plaintext (clear text is unencrypted information)
 ### 1 Population Step
 the first class to start is [Population.java](https://github.com/AbdullahTaher93/TFM/blob/master/src/cryptanalysis_gas/Population.java) in this class we created the Population which represents a set of chromosomes and each chromosome has the same length so, Population class has one constructor  and many methods that follow:
 
-#### 1.1 Population Constructor 
+####  Population Constructor 
    Population(int No_OF_keys,int length_OF_key)
    * No_OF_keys: No. of chromosomes
    * length_OF_key: length of the chromosome
@@ -137,6 +137,32 @@ the first class to start is [Population.java](https://github.com/AbdullahTaher93
 
    ![Chros16_8](https://github.com/AbdullahTaher93/TFM/blob/master/images/Chros16_8.png)
 
+### 2 Transpostion Step
+
+for that, the second step is Transposition Cipher, in this class [Transposition.java](https://github.com/AbdullahTaher93/TFM/blob/master/src/cryptanalysis_gas/Transpostion.java) we will try to get the origin text by using exchange the positions of characters as I explained  in the section of Transposition Cipher, so if we have 16  keys, we can get 16 texts that  may be the plaintext,in this class, we have 4 methods and one constructor,
+
+* [Transposition constructor](https://github.com/AbdullahTaher93/TFM/blob/5e216b8067cabc817ee4283c88210a251c72085c/src/cryptanalysis_gas/Transpostion.java#L12)
+this Constructor has two parameters the array of keys which we got from Population class and ciphertext, then we will call methods that follow:
+
+* [check_if_lenNotDivid](https://github.com/AbdullahTaher93/TFM/blob/5e216b8067cabc817ee4283c88210a251c72085c/src/cryptanalysis_gas/Transpostion.java#L30)
+We created this method to enforce the message length, adding an "X" to the end of the message, making the message proportional to the key length.
+
+* [change_position](https://github.com/AbdullahTaher93/TFM/blob/5e216b8067cabc817ee4283c88210a251c72085c/src/cryptanalysis_gas/Transpostion.java#L40)
+this method splits the ciphertext as blocks, the length of each block equals the length of the key, then call the SortbyKey method with sending one of the keys and one of the blocks to exchange the characters positions in each block.
+
+* [SortByKey](https://github.com/AbdullahTaher93/TFM/blob/5e216b8067cabc817ee4283c88210a251c72085c/src/cryptanalysis_gas/Transpostion.java#L62)
+this method receives one of the keys and one block of ciphertext and then exchanges the positions of all characters in that block depending on that key.
+* [Print](https://github.com/AbdullahTaher93/TFM/blob/5e216b8067cabc817ee4283c88210a251c72085c/src/cryptanalysis_gas/Transpostion.java#L75)
+
+this method called in the Transposition constructor to print the array of PlainText after doing the Transposition.
+
+##### Experimental results
+
+     No. of chromosomes is: 12
+     length of chromosome is: 6
+     CipherText: "epyrcntnoiXX"
+
+   ![TransClass](https://github.com/AbdullahTaher93/TFM/blob/master/images/TransClass.png)
 
 
 
