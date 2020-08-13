@@ -1,0 +1,167 @@
+% ###################    CONFIGURACIÓN ################### 
+
+% Configuración de estilos generales de la página
+\documentclass[12pt,
+               % twocolumn
+              ]{article}
+              
+\usepackage[paperheight=297mm,
+			paperwidth=210mm,
+			tmargin=28mm, 
+			headheight=0mm, 
+			headsep=15mm,
+			textheight=240mm,
+			footskip=7mm,
+			textwidth=159.2mm,
+			bindingoffset=10mm,
+			twoside
+			]{geometry} 
+% -------------------------------------------------------   
+
+
+% Configuración de párrafos
+% -------------------------------------------------------         
+\setlength{\parindent}{0em} % Tabulación de un párrafo nuevo
+\setlength{\parskip}{1em}   % Distancia en blanco entre un párrafo y otro.
+\setlength{\columnsep}{1em} % Margen izquierdo de columnas
+\renewcommand{\baselinestretch}{1.5} % Interlineado. Espacio entre dos renglones.
+% ------------------------------------------------------- 
+
+
+% Paquetes de idioma
+\usepackage[utf8]{inputenc}
+\usepackage[english,spanish,es-tabla]{babel} % English para el abstract
+% ------------------------------------------------------- 
+
+% Paquetes para imprimir código fuente
+%\usepackage[cache=false]{minted}
+
+\usepackage{subcaption}
+
+\usepackage[table,xcdraw]{xcolor} % Color de tabla
+
+\usepackage{lscape} % Para poder poner en horizontal una página
+
+% Para símbolos de comprobación y x.
+\usepackage{pifont}% http://ctan.org/pkg/pifont
+\newcommand{\cmark}{ \color{green} \ding{51}}%
+\newcommand{\xmark}{ \color{red}\ding{55}}%
+
+\usepackage{eurosym} % Para símbolo €
+\usepackage{amsmath} % Para símbolo € en fórmulas
+
+% Paquetes para tree. Gráfico jerárquico
+\usepackage{tikz}
+\usetikzlibrary{trees}
+
+% -------------------------------------------------------  
+
+% Paquetes generales
+\usepackage{enumitem} % Para configurar enumeraciones
+%\usepackage[usenames,dvipsnames]{xcolor}    % Para colores en el texto
+
+% Lorem ipsum
+\usepackage[pangram]{blindtext}
+
+\usepackage{scrextend} % Para entorno{addmargin} (dar margen a un párrafo...)
+
+% Lorem ipsum
+\usepackage{lipsum}
+
+\usepackage{fancyhdr}
+
+%\usepackage[toc,page]{appendix}
+
+\usepackage[spanish]{babel}
+\usepackage{appendix}
+
+\renewcommand{\appendixname}{Anexos}
+\renewcommand{\appendixtocname}{Anexos}
+\renewcommand{\appendixpagename}{Anexos}
+
+
+\usepackage{float} % para controlar la situación de los entornos flotantes
+
+\usepackage{graphicx} % figuras
+
+% Definimos un nuevo color
+\definecolor{webred}{rgb}{0.5, 0, 0}   % less intense red
+
+\usepackage[bookmarks=true,
+			bookmarksnumbered=false, % true means bookmarks in 
+									 % left window are numbered                         
+			bookmarksopen=false,     % true means only level 1
+									 % are displayed.
+			colorlinks=true,
+			linkcolor=webred,
+			%linkcolor=OliveGreen,
+			citecolor=webred,
+			urlcolor=cyan]{hyperref} % Para hiperenlaces
+
+% Definimos una nueva orden para pintar una línea cuando escribamos \HRule
+\newcommand{\HRule}{\rule{\linewidth}{1mm}}
+
+
+
+
+% ###################   FIN CONFIGURACIÓN ################### 
+
+% ###################	INICIO DEL DOCUMENTO ###################
+
+\begin{document}
+
+\pagestyle{empty}
+
+\input{src/cover_page}
+
+
+
+
+
+
+
+\newpage
+
+\tableofcontents
+
+\newpage
+
+
+
+\newpage
+
+
+
+\newpage
+
+
+
+\newpage
+
+
+
+\newpage
+
+
+
+\newpage
+
+
+
+\newpage
+
+
+
+\newpage
+
+
+
+\newpage
+
+
+
+\end{document}
+
+
+
+% ###################	FIN DEL DOCUMENTO ###################
