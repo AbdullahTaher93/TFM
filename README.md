@@ -77,7 +77,9 @@ Where β and γ are a constant
 
 
 ### 4- Selection operation
-In this operation, selection (choosing) the best keys only. The best key which has the high value of fitness. In the proposed work select only M/2 keys which have the high fitness.  To perform the selection operation nedded a sorting function to sort pool of keys from high fitness to low fitness.
+In this operation, selection (choosing) the best keys only. The best key which has the high value of fitness. In the proposed work select only M/2 keys which have the high fitness.  To perform the selection operation nedded a sorting function to sort pool of keys from high fitness to low fitness.Fitness Proportionate Selection is one of the most popular ways of parent selection. In this every individual can become a parent with a probability which is proportional to its fitness. Therefore, fitter individuals have a higher chance of mating and propagating their features to the next generation. Therefore, such a selection strategy applies a selection pressure to the more fit individuals in the population, evolving better individuals over time.
+
+
 
 
 ### 5- Crossover Operation
@@ -164,7 +166,7 @@ this method receives one of the keys and one block of ciphertext and then exchan
 
    ![TransClass](https://github.com/AbdullahTaher93/TFM/blob/master/images/TransClass.png)
 
-### Evaluation Fitness step
+### 3 Evaluation Fitness step
 with this step I created a new class, I called it, [Fitness.java](https://github.com/AbdullahTaher93/TFM/blob/a4eefef7c6f6d71e4b44ff380a6ed6dbc53719fc/src/cryptanalysis_gas/Fitness.java), this class contents on one constructor and set of methods to calculate fitness step by step, The first thing we did it is creating 4 arrays that follow:-
 * [Twochar](https://github.com/AbdullahTaher93/TFM/blob/a4eefef7c6f6d71e4b44ff380a6ed6dbc53719fc/src/cryptanalysis_gas/Fitness.java#L24): to save the bigram frequencies.
 * [TwoCharVale](https://github.com/AbdullahTaher93/TFM/blob/a4eefef7c6f6d71e4b44ff380a6ed6dbc53719fc/src/cryptanalysis_gas/Fitness.java#L25): to save the bigram score(weight)
@@ -190,6 +192,23 @@ now, I'm going to start with [Fitness constructor](https://github.com/AbdullahTa
    ![Fitness](https://github.com/AbdullahTaher93/TFM/blob/master/images/Fitness.png)
 
 
+### 4 Selection step
+After getting fitness array for each PlainText from the previous step, it is time to select the best parents to generate a new population from those parents, let us firstly sort the fitness array descending  then select the best half of that array by using high fitness,in the [Selection.java](https://github.com/AbdullahTaher93/TFM/blob/master/src/cryptanalysis_gas/Selection.java) class, we have one selection contracture which receives  three parameters (the keys Array(chromosomes), PlainTexts Array, fitness Array ), under this contractor the first thing we have done it is initializing a set of arrays, 
+[selectkey](): to save the best of keys
+[selectPlinText](): to save the best plainText
+ then we called two methods are the following:
+[Sell_sort](): this method sorts the fitness array at the same time sorts the keys and plaintexts arrays depending on the fitness values.
+note: the sell sort is one of the best sort ways are used to sort set of numbers
+[Selection](): this method saves the best half of keys and plaintexts in other arrays and preppers them To produce a new generation
+[Print](): to print the best keys and plaintexts.
 
+##### Experimental results
 
+     No. of chromosomes is: 12
+     length of chromosome is: 6
+     CipherText: "epyrcntnoiXX"
+
+![Selection](https://github.com/AbdullahTaher93/TFM/blob/master/images/Selection1.png)
+
+![Selection](https://github.com/AbdullahTaher93/TFM/blob/master/images/Selection2.png)
 
