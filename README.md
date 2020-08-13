@@ -71,7 +71,9 @@ Where β and γ are a constant
 * Bi represents the bigram (two letter sequence).
 * Ti represents the triagram (three letter sequence).
 
-![TiBi](https://github.com/AbdullahTaher93/TFM/blob/master/images/TIBI.png)
+![TiBi1](https://github.com/AbdullahTaher93/TFM/blob/master/images/TIBI1.png)
+
+![TiBi2](https://github.com/AbdullahTaher93/TFM/blob/master/images/TIBI2.png)
 
 
 ### 4- Selection operation
@@ -137,9 +139,9 @@ the first class to start is [Population.java](https://github.com/AbdullahTaher93
 
    ![Chros16_8](https://github.com/AbdullahTaher93/TFM/blob/master/images/Chros16_8.png)
 
-### 2 Transpostion Step
+### 2 Transposition Step
 
-for that, the second step is Transposition Cipher, in this class [Transposition.java](https://github.com/AbdullahTaher93/TFM/blob/master/src/cryptanalysis_gas/Transpostion.java) we will try to get the origin text by using exchange the positions of characters as I explained  in the section of Transposition Cipher, so if we have 16  keys, we can get 16 texts that  may be the plaintext,in this class, we have 4 methods and one constructor,
+The second step is Transposition Cipher, in this class [Transposition.java](https://github.com/AbdullahTaher93/TFM/blob/master/src/cryptanalysis_gas/Transpostion.java) we will try to get the origin text by using exchange the positions of characters as I explained  in the section of Transposition Cipher, so if we have 16  keys, we can get 16 texts that  may be the plaintext,in this class, we have 4 methods and one constructor,
 
 * [Transposition constructor](https://github.com/AbdullahTaher93/TFM/blob/5e216b8067cabc817ee4283c88210a251c72085c/src/cryptanalysis_gas/Transpostion.java#L12)
 this Constructor has two parameters the array of keys which we got from Population class and ciphertext, then we will call methods that follow:
@@ -152,9 +154,7 @@ this method splits the ciphertext as blocks, the length of each block equals the
 
 * [SortByKey](https://github.com/AbdullahTaher93/TFM/blob/5e216b8067cabc817ee4283c88210a251c72085c/src/cryptanalysis_gas/Transpostion.java#L62)
 this method receives one of the keys and one block of ciphertext and then exchanges the positions of all characters in that block depending on that key.
-* [Print](https://github.com/AbdullahTaher93/TFM/blob/5e216b8067cabc817ee4283c88210a251c72085c/src/cryptanalysis_gas/Transpostion.java#L75)
-
-this method called in the Transposition constructor to print the array of PlainText after doing the Transposition.
+* [Print](https://github.com/AbdullahTaher93/TFM/blob/5e216b8067cabc817ee4283c88210a251c72085c/src/cryptanalysis_gas/Transpostion.java#L75) this method called in the Transposition constructor to print the array of PlainText after doing the Transposition.
 
 ##### Experimental results
 
@@ -163,6 +163,33 @@ this method called in the Transposition constructor to print the array of PlainT
      CipherText: "epyrcntnoiXX"
 
    ![TransClass](https://github.com/AbdullahTaher93/TFM/blob/master/images/TransClass.png)
+
+### Evaluation Fitness step
+with this step I created a new class, I called it, [Fitness.java](https://github.com/AbdullahTaher93/TFM/blob/a4eefef7c6f6d71e4b44ff380a6ed6dbc53719fc/src/cryptanalysis_gas/Fitness.java), this class contents on one constructor and set of methods to calculate fitness step by step, The first thing we did it is creating 4 arrays that follow:-
+* [Twochar](https://github.com/AbdullahTaher93/TFM/blob/a4eefef7c6f6d71e4b44ff380a6ed6dbc53719fc/src/cryptanalysis_gas/Fitness.java#L24): to save the bigram frequencies.
+* [TwoCharVale](https://github.com/AbdullahTaher93/TFM/blob/a4eefef7c6f6d71e4b44ff380a6ed6dbc53719fc/src/cryptanalysis_gas/Fitness.java#L25): to save the bigram score(weight)
+* [Threechar](https://github.com/AbdullahTaher93/TFM/blob/a4eefef7c6f6d71e4b44ff380a6ed6dbc53719fc/src/cryptanalysis_gas/Fitness.java#L30): to save the trigram frequencies.
+* [ThreecharVale](https://github.com/AbdullahTaher93/TFM/blob/a4eefef7c6f6d71e4b44ff380a6ed6dbc53719fc/src/cryptanalysis_gas/Fitness.java#L31):  to save the trigram score(weight)
+
+now, I'm going to start with [Fitness constructor](https://github.com/AbdullahTaher93/TFM/blob/a4eefef7c6f6d71e4b44ff380a6ed6dbc53719fc/src/cryptanalysis_gas/Fitness.java#L45) which receives the Array of PlainTexts which we got it from Transipostion step and Array of keys(chromosomes), under this constructor, I initialized set of arrays to save the summation of bigram frequencies of each PlainText and  trigram frequencies summation, and another array to save the  final value of fitness for each PlainText, then I called methods to start calculating which follow:
+
+* [FitnessMethod](https://github.com/AbdullahTaher93/TFM/blob/a4eefef7c6f6d71e4b44ff380a6ed6dbc53719fc/src/cryptanalysis_gas/Fitness.java#L61): this method cuts each PlainText to subsequent, one time to cut two-letter sequence with calling [checktwoChars](https://github.com/AbdullahTaher93/TFM/blob/a4eefef7c6f6d71e4b44ff380a6ed6dbc53719fc/src/cryptanalysis_gas/Fitness.java#L95) method to check if that sequence exists in the bigram frequencies array or not, and another time to cut three-letter sequence calling [checkthreeChars](https://github.com/AbdullahTaher93/TFM/blob/a4eefef7c6f6d71e4b44ff380a6ed6dbc53719fc/src/cryptanalysis_gas/Fitness.java#L112) method to check if that sequence exists in the trigram frequencies array or not so if it existed this method will add the score of that sequence to [Twocharcount](https://github.com/AbdullahTaher93/TFM/blob/a4eefef7c6f6d71e4b44ff380a6ed6dbc53719fc/src/cryptanalysis_gas/Fitness.java#L47) (two-letter sequence) /[Threecharcount](https://github.com/AbdullahTaher93/TFM/blob/a4eefef7c6f6d71e4b44ff380a6ed6dbc53719fc/src/cryptanalysis_gas/Fitness.java#L48) (three-letter sequence) which keeps the summation of the scores of each PlainText.
+
+* [fitnessequation](): under this method, we will calculate the  final value of fitness for each PlainText by using the equation and save it in [Fitness](https://github.com/AbdullahTaher93/TFM/blob/a4eefef7c6f6d71e4b44ff380a6ed6dbc53719fc/src/cryptanalysis_gas/Fitness.java#L156) array.
+
+* [Print](https://github.com/AbdullahTaher93/TFM/blob/a4eefef7c6f6d71e4b44ff380a6ed6dbc53719fc/src/cryptanalysis_gas/Fitness.java#L160): this method to print all of the plainTexts with their fitness values.
+
+##### Experimental results
+
+     No. of chromosomes is: 12
+     length of chromosome is: 6
+     CipherText: "epyrcntnoiXX"
+
+   ![TransClass](https://github.com/AbdullahTaher93/TFM/blob/master/images/TransClass.png)
+
+   ![Fitness](https://github.com/AbdullahTaher93/TFM/blob/master/images/Fitness.png)
+
+
 
 
 
