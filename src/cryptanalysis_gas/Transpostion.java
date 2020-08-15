@@ -12,14 +12,17 @@ package cryptanalysis_gas;
 public class Transpostion {
     
     String[] ArrOfPlain;
-    public Transpostion(int[][] keys_Array,String cipher) {
+    boolean flag=false;
+    
+    public Transpostion(int[][] keys_Array,String cipher,String PlainText) {
          ArrOfPlain=new String[keys_Array.length];
          
          String carr=check_if_lenNotDivid(keys_Array[0].length,cipher.length());
          cipher=cipher+carr;
      System.out.println("Add the X To cipher text If Do Not Be Divisible By key's length-----> "+cipher);
      change_position(keys_Array, cipher);
-
+     
+     checkifexs(PlainText);
      print();
      
      
@@ -76,5 +79,33 @@ public class Transpostion {
      for(int i=0;i<ArrOfPlain.length;i++)
        System.out.println("Plaintexts= "+ArrOfPlain[i]); 
  }
+
+    private void checkifexs( String PlainText) {
+        for(int i=0;i<ArrOfPlain.length;i++){
+            if(ArrOfPlain[i].subSequence(0, PlainText.length()).toString().equalsIgnoreCase(PlainText)){
+                System.out.println("&&&&&&&&&&&&&&&&&&&&&&&&&");
+                System.err.print(ArrOfPlain[i]+  "  " +  i);
+                flag=true;
+               System.out.println("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&");
+           
+            }
+            
+            
+        }
+        
+       /* for (int[] keys_Array1 : keys_Array) {
+            if (flag==true) {
+                break;
+            } else {
+                for (int j = 0; j < keys_Array1.length; j++) {
+                    if (Key_plain == keys_Array1) {
+                        flag=true;
+                    }
+                    break;
+                }
+            }
+        }*/
+        
+    }
 
 }
