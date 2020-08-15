@@ -23,8 +23,8 @@ public class MutationTest {
         Transpostion transpostion=new Transpostion(population.population, "ciphertest");
          Fitness fitness=new Fitness(transpostion.ArrOfPlain, population.population);
          Selection s=new Selection(fitness.fi, transpostion.ArrOfPlain, population.population);
-         CrossOver crossOver=new CrossOver(s.seleckey, s.selecplain);
-         Mutation m=new Mutation(crossOver.newpopulionPlaint, crossOver.newpopulionKey);
+         CrossOver crossOver=new CrossOver(s.seleckey, s.selecplain,0,true);
+         Mutation m=new Mutation(crossOver.newpopulionPlaint, crossOver.newpopulionKey,70);
     }
     
     @BeforeClass

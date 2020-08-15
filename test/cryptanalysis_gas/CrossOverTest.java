@@ -23,7 +23,7 @@ public class CrossOverTest {
         Transpostion transpostion=new Transpostion(population.population, "ciphertest");
          Fitness fitness=new Fitness(transpostion.ArrOfPlain, population.population);
          Selection s=new Selection(fitness.fi, transpostion.ArrOfPlain, population.population);
-         CrossOver crossOver=new CrossOver(s.seleckey, s.selecplain);
+         CrossOver crossOver=new CrossOver(s.seleckey, s.selecplain,0,true);
          
     }
     
