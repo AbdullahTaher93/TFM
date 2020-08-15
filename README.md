@@ -193,14 +193,20 @@ now, I'm going to start with [Fitness constructor](https://github.com/AbdullahTa
 
 
 ### 4 Selection step
+
 After getting fitness array for each PlainText from the previous step, it is time to select the best parents to generate a new population from those parents, let us firstly sort the fitness array descending  then select the best half of that array by using high fitness,in the [Selection.java](https://github.com/AbdullahTaher93/TFM/blob/master/src/cryptanalysis_gas/Selection.java) class, we have one selection contracture which receives  three parameters (the keys Array(chromosomes), PlainTexts Array, fitness Array ), under this contractor the first thing we have done it is initializing a set of arrays, 
-[selectkey](): to save the best of keys
-[selectPlinText](): to save the best plainText
+
+* [selectkey](https://github.com/AbdullahTaher93/TFM/blob/master/src/cryptanalysis_gas/Selection.java#L25): to save the best of keys
+
+* [selectPlinText](https://github.com/AbdullahTaher93/TFM/blob/master/src/cryptanalysis_gas/Selection.java#L26): to save the best plainText
  then we called two methods are the following:
-[Sell_sort](): this method sorts the fitness array at the same time sorts the keys and plaintexts arrays depending on the fitness values.
+
+* [Sell_sort](https://github.com/AbdullahTaher93/TFM/blob/a9aa771b749c22a744244eb962f17618d307e4e4/src/cryptanalysis_gas/Selection.java#L42): this method sorts the fitness array at the same time sorts the keys and plaintexts arrays depending on the fitness values.
 note: the sell sort is one of the best sort ways are used to sort set of numbers
-[Selection](): this method saves the best half of keys and plaintexts in other arrays and preppers them To produce a new generation
-[Print](): to print the best keys and plaintexts.
+
+* [Selection](https://github.com/AbdullahTaher93/TFM/blob/a9aa771b749c22a744244eb962f17618d307e4e4/src/cryptanalysis_gas/Selection.java#L70): this method saves the best half of keys and plaintexts in other arrays and preppers them To produce a new generation
+
+* [Print](https://github.com/AbdullahTaher93/TFM/blob/a9aa771b749c22a744244eb962f17618d307e4e4/src/cryptanalysis_gas/Selection.java#L84): to print the best keys and plaintexts.
 
 ##### Experimental results
 
@@ -213,24 +219,30 @@ note: the sell sort is one of the best sort ways are used to sort set of numbers
 ![Selection](https://github.com/AbdullahTaher93/TFM/blob/master/images/Selection2.png)
 
 ### CrossOver steps:
+
 in this class, we  have to decide What better behavior to generate a new generation, for that, it's so important to step, as we explained in this [section](https://github.com/AbdullahTaher93/TFM#5--crossover-operation) that there are many CrossOver operators to generate a new population dependent on the previous generation, we have used the 3 operators, before starting to create methods to perform these operators we had created a new class, we called it [CrossOver](https://github.com/AbdullahTaher93/TFM/blob/master/src/cryptanalysis_gas/CrossOver.java) class which contents one [constructor] to initialize  set of arrays to save next generation and calls some methods that follow:
-[crossing]: this method receives the set of best parents whose  we got them from the Selection step, this method takes each parent individually and splits it into two equal parts then keeps the first part without change and do ascending sorts to the second then marriages them to represent a new child *an example * 
+
+* [crossing]: this method receives the set of best parents whose  we got them from the Selection step, this method takes each parent individually and splits it into two equal parts then keeps the first part without change and do ascending sorts to the second then marriages them to represent a new child *an example * 
+
 	Parent 1 = 5 4 6 3 1 2 so, the Child 1= 5 4 6 1 2 3
 	Parent 2 = 1 6 5 4 3 2 so, the Child 2= 6 1 5 2 3 4 
 
-[onePoint](https://github.com/AbdullahTaher93/TFM/blob/master/src/cryptanalysis_gas/CrossOver.java#L151): this is another method to get a new population, but in this method, we will deal with two parents to generate Two children, as we explained in this [section](https://github.com/AbdullahTaher93/TFM#51-one-point-crossover), so, this method takes two parents and keeps the first part of the first parent splits them into two equal parts for generating a first-child, keeps the first part of the first parent without change and copy the remaining unused numbers from the second parent to the first child, then it does the same process to generate a second-child, but it will keep the first part of the second parent without change and copy the remaining unused numbers from the first parent to the second child *an example* 
+* [onePoint](https://github.com/AbdullahTaher93/TFM/blob/master/src/cryptanalysis_gas/CrossOver.java#L151): this is another method to get a new population, but in this method, we will deal with two parents to generate Two children, as we explained in this [section](https://github.com/AbdullahTaher93/TFM#51-one-point-crossover), so, this method takes two parents and keeps the first part of the first parent splits them into two equal parts for generating a first-child, keeps the first part of the first parent without change and copy the remaining unused numbers from the second parent to the first child, then it does the same process to generate a second-child, but it will keep the first part of the second parent without change and copy the remaining unused numbers from the first parent to the second child *an example* 
+
 	 Parent 1 = 5 4 6 |3 1 2 
    	 Parent 2 = 1 6 5 |4 3 2
 	so, child 1= 5 4 6| 1 3 2 and child 2= 1 6 5 | 4 3 2
 
-[multiPoint](https://github.com/AbdullahTaher93/TFM/blob/master/src/cryptanalysis_gas/CrossOver.java#L176):this method is a generalization of the one-point crossover wherein alternating segments are swapped to get new off-springs * an example* 
-        	Parent 1 = 5 4 |6 3| 1 2 
- 		Parent 2 = 1 6 |5 4| 3 2
-          so, child 1 = 1 5 |3 6 |4 2 , and child 2= 6 3| 5 4 |1 2 
-[marriage_keys](https://github.com/AbdullahTaher93/TFM/blob/master/src/cryptanalysis_gas/CrossOver.java#L137): The main purpose of creating this method is, as we know all of the CrossOver operators can generate N of children equals the number of parents Since the selection step gives us half of the original population Certainly the next generation will be half of the original population for that, this method receives two arrays the first array keeps all of the new children and the second array keeps  (the best parent whose got it from the selection step) or apply another crossover operator to give us the second half of child, 
+* [multiPoint](https://github.com/AbdullahTaher93/TFM/blob/master/src/cryptanalysis_gas/CrossOver.java#L176):this method is a generalization of the one-point crossover wherein alternating segments are swapped to get new off-springs * an example* 
+            
+               Parent 1 = 5 4 |6 3| 1 2 
+               Parent 2 = 1 6 |5 4| 3 2
+               so, child 1 = 1 5 |3 6 |4 2 , and child 2= 6 3| 5 4 |1 2 
+
+* [marriage_keys](https://github.com/AbdullahTaher93/TFM/blob/master/src/cryptanalysis_gas/CrossOver.java#L137): The main purpose of creating this method is, as we know all of the CrossOver operators can generate N of children equals the number of parents Since the selection step gives us half of the original population Certainly the next generation will be half of the original population for that, this method receives two arrays the first array keeps all of the new children and the second array keeps  (the best parent whose got it from the selection step) or apply another crossover operator to give us the second half of child, 
 finally, it will marriage the arrays and keep them into [newpopulionKey](https://github.com/AbdullahTaher93/TFM/blob/master/src/cryptanalysis_gas/CrossOver.java#L23) array which represents the next population.
 
-[Print](https://github.com/AbdullahTaher93/TFM/blob/master/src/cryptanalysis_gas/CrossOver.java#L234):this method will print the array of the new population.
+* [Print](https://github.com/AbdullahTaher93/TFM/blob/master/src/cryptanalysis_gas/CrossOver.java#L234):this method will print the array of the new population.
 
 ##### Experimental results
 
