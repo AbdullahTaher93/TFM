@@ -13,88 +13,60 @@ import java.util.Random;
  */
 public class Mutation {
     
-    String  Array_Of_Plain[];
+  
     int key[][];
-    CrossOver cross;
+    
     int x=0,y=0;
 
-    public Mutation(String Plain_Text[],int keys[][]) {
+    public Mutation(String Plain_Text[],int keys[][],int mution_ratio) {
+         
         
-         Array_Of_Plain=new String[Plain_Text.length];
          key=new int[keys.length][keys[0].length];
-         cross=new CrossOver();
+         
          Random rand=new Random();  
-          do{
+          
+          
+           int n1,n2;
+       
+        for(int i=0;i<keys.length*mution_ratio/100;i++)
+        {
+            do{
           
                 x=1+rand.nextInt(keys[0].length);
                 y=1+rand.nextInt(keys[0].length);
             }while (x==y);
-          
-           int n1,n2;
-        System.out.println("The First Number="+x+"\nThe Second Number="+y);
-        for(int i=0;i<keys.length;i++)
-        {
+           System.out.println("Key("+i+1+") Two random Postions= "+x+" , "+y);
            n1= keys[i][x-1];
            n2= keys[i][y-1];
            keys[i][x-1]=n2;
            keys[i][y-1]=n1;
            
         }
+        key=keys;
         
-         for(int i=0;i<keys.length;i++) 
-           {
-             Array_Of_Plain[i]="";
-             trans2(Plain_Text[i],i,keys);
-             
-           }
          
-         
-         Print(keys);
+         print(key);
         
     }
-    private void trans2(String selecplain,int count,int corssover[][]){
-    String cut="";
+   
     
-    for(int i=1;i<=selecplain.length();i++)
-      {
-          cut=cut+selecplain.charAt(i-1);
-          if(i%corssover[0].length==0)
-          {
-              
-          SortByKey(cut,count,corssover);
-          
-          cut="";
-          
-          } 
-          
-      }
-    }
     
-    private void SortByKey(String cut,int count,int corssover[][]){
-     String sbk="";      
-     for(int i=0;i<cut.length();i++)
-     {
-         
-         sbk=sbk+cut.charAt(corssover[count][i]-1);
-     }
-     Array_Of_Plain[count]=Array_Of_Plain[count]+sbk;
-     
+   public void print(int[][] keyss){
+        
+        System.out.println();
+        System.out.println("Final Table of keyes(New Population)");
+        System.out.println("-------------------------------------");
+        for(int i=0;i<keyss.length;i++)
+        {
+            for(int j=0;j<keyss[i].length;j++)
+            System.out.print(" "+keyss[i][j]+" ");
+            
+            System.out.println();
+         }  
        
-    }
+        }
     
-    public void Print(int keys[][]){
-       System.out.println();
-       for(int i=0;i<keys.length;i++){
-           for(int j=0;j<keys[i].length;j++)
-           {
-               System.out.print(" "+keys[i][j]+" ");
-               
-           }
-           key=keys;
-           //System.out.println(Array_Of_Plain[i]);
-           System.out.println();
-       }     
-   }
+   
  }   
     
     
