@@ -5,7 +5,8 @@
  */
 package cryptanalysis_gas;
 
-import java.util.Scanner;
+import jdk.nashorn.internal.ir.BreakNode;
+
 
 /**
  *
@@ -15,42 +16,88 @@ public class Cryptanalysis_GAs {
 
     /**
      * @param args the command line arguments
-     */
+     */static int [][] keys;
+     //0= My crossOver
+     //1= onepoint Crossover
+     //2= Davis_Order
+     static int type_of_crossOver=1;
+     //true= keeps best half parents into next generation
+    static  boolean keeps_parents=false;
+     //ratio of matution from 100
+    static  int mutation_ratio=70;
+    static String Crossover_Operator="";
+    
     public static void main(String[] args) {
         // TODO code application logic here
-        Population population=new Population(12,6);
-        String cipherText="epyrcntnoi";
-        Transpostion transpostion=new Transpostion(population.population, cipherText);
-        Fitness fitness=new Fitness(transpostion.ArrOfPlain, population.population);
-        Selection selection=new Selection(fitness.fi, transpostion.ArrOfPlain, population.population);
-        CrossOver crossOver=new CrossOver(selection.seleckey, selection.selecplain);
-        Mutation mutation=new Mutation(crossOver.newpopulionPlaint, crossOver.newpopulionKey);
+        int itrations=0;
+        int no_of_population=0;
         
-        System.out.println("Enter The Round Number=");
-        Scanner in=new Scanner(System.in);
-        int n=in.nextInt();
-        for(int i=1;i<=n;i++){
-                    if(n>0){
-                        System.out.println("The Round="+i);
-                        System.out.println("***Step First From Genetics Algorithm Initialise Population*** ");
-                        System.out.println("---------New Keys or  New populion-----------");
-                        mutation.Print(crossOver.newpopulionKey);
+        Population population=new Population(16,8);
+        keys=new int[population.population.length][population.population[0].length];
+        keys=population.population;
+        String cipherText="nm yame ailsbdu  leatahh'rn m iImfooatirnnX g.XE";
+        String PlainText="my name is abdullah";
+        boolean flag=false;
+        itrations++;
+        
+        no_of_population=itrations*population.population.length;
+        Transpostion transpostion;
+        Fitness fitness;
+        Selection selection;
+        CrossOver crossOver;
+        Mutation mutation;
+        transpostion=new Transpostion(keys, cipherText,PlainText);
+        flag=transpostion.flag;
+        if(flag!=true){
+         fitness=new Fitness(transpostion.ArrOfPlain, keys);
+         selection=new Selection(fitness.fi, transpostion.ArrOfPlain, keys);
+        
+        crossOver=new CrossOver(selection.seleckey, selection.selecplain,type_of_crossOver, keeps_parents);
+        mutation=new Mutation(crossOver.newpopulionPlaint, crossOver.newpopulionKey,mutation_ratio);
+        keys=mutation.key;
+       
+        
+       
+       do{
+                    
+                        
+                        
                         System.out.println("***Fixed Period d With a Permutation Function Transposition Cipher***");
-                        Transpostion Tr=new Transpostion(mutation.key,cipherText);
+                        Transpostion Tr=new Transpostion(keys,cipherText,PlainText);
+                        itrations++;
+                        no_of_population=itrations*population.population.length;
+                        flag=Tr.flag;
+                        if(flag!=true){
                         System.out.println("***Step Two From Genetics Algorithm Evaluation Fitness***");
-                        Fitness fit=new Fitness(Tr.ArrOfPlain,mutation.key);
+                        Fitness fit=new Fitness(Tr.ArrOfPlain,keys);
                         System.out.print("***Step Three From Genetic Algorithm Selection Operation Top 6***\n");
                         System.out.println("***Sorted Plaintext And key And Fitness From High To Low By High Fitness***");
-                        Selection ss=new Selection(fit.fi,Tr.ArrOfPlain,mutation.key);
+                        Selection ss=new Selection(fit.fi,Tr.ArrOfPlain,keys);
                         System.out.println("***Step Foure From Genetics Algorithm Recombination (Crossover) Operation ***");
-                        CrossOver cross=new CrossOver(ss.seleckey,ss.selecplain);
+                        CrossOver cross=new CrossOver(ss.seleckey,ss.selecplain,type_of_crossOver, keeps_parents);
+                        
                         System.out.println("***Step Five From Genetics Algorithm Mutation Operation***");
-                        Mutation mm=new Mutation(crossOver.newpopulionPlaint,mutation.key);
-                          }
-                    else{
-                         System.out.print("Enter number of loop greater than zero");
-            }
-           }
+                        Mutation mm=new Mutation(cross.newpopulionPlaint,cross.newpopulionKey,mutation_ratio);
+                        keys=mm.key;
+                        //crossOver.newpopulionKey=cross.newpopulionKey;
+                        // mm.Print(cross.newpopulionKey);
+                        
+                        Crossover_Operator=crossOver.Crossover_Operator;
+                        }
+                        
+                        else{
+                            System.out.println();
+                           System.out.println("itrations= "+itrations+"\nno of the population= "+no_of_population+"\nCrossover Operator: "+Crossover_Operator+"\nKeeps best parent to next Population: "+keeps_parents+"\nMutation Ratio: "+mutation_ratio+"%"); 
+                        }
+                          
+                   
+           }while(flag==false);
+            }else{
+           System.out.println();
+           
+           System.out.println("itrations= "+itrations+"\nno of the population= "+no_of_population+"\nCrossover Operator: "+Crossover_Operator+"\nKeeps best parent to next Population: "+keeps_parents+"\nMutation Ratio: "+mutation_ratio+"%"); 
+        }
     }
+    
     
 }
