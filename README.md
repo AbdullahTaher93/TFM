@@ -275,3 +275,27 @@ finally, it will marriage the arrays and keep them into [newpopulionKey](https:/
 
  ![multi-point-pop](https://github.com/AbdullahTaher93/TFM/blob/master/images/multi_point_pop.png)
 
+### Mutation Steps
+
+ under this class [Mutation.java](https://github.com/AbdullahTaher93/TFM/blob/a9aa771b749c22a744244eb962f17618d307e4e4/src/cryptanalysis_gas/Mutation.java) we will mutate the gene, where We can determine a specific percentage of the generation then perform the mutation process on this part of the population only, so, the Mutation [constructor](https://github.com/AbdullahTaher93/TFM/blob/a9aa771b749c22a744244eb962f17618d307e4e4/src/cryptanalysis_gas/Mutation.java#L21) receives the array of the new gene which we got from CrossOver steps with a mutation  ratio in population, then we can mutate 2 positions for each child, these positions are random numbers in each child *an example*
+
+ ![MutationEx](https://github.com/AbdullahTaher93/TFM/blob/master/images/MutationEx.png)
+
+ Then we can call [Print](https://github.com/AbdullahTaher93/TFM/blob/a9aa771b749c22a744244eb962f17618d307e4e4/src/cryptanalysis_gas/Mutation.java#L54) method to print the array of population after mutation process. 
+
+
+ Experimental results
+
+          No. of chromosomes is: 12
+          length of chromosome is: 6
+          CrossOver Operator: crossing
+          Keeps best parent to next Population: true
+          Mutation Ratio: 100%
+
+##### Table of population before applying Mutation process
+
+![MutationRe](https://github.com/AbdullahTaher93/TFM/blob/master/images/MutationRe.png)
+
+##### Table of population after applying Mutation process
+
+![beforeMutation](https://github.com/AbdullahTaher93/TFM/blob/master/images/breforeMutation.png)
