@@ -52,7 +52,7 @@ double [] ThreeCharVale={1.81,0.31,0.24,0.73,0.31,0.24,0.72,0.30,0.24,0.42,0.28,
         
         FitnessMethod( Array_Of_PlainText);
         fitnessequation(Array_Of_PlainText.length);
-        print();
+       // print();
         
          
         
