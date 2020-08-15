@@ -294,8 +294,8 @@ finally, it will marriage the arrays and keep them into [newpopulionKey](https:/
 
 ##### Table of population before applying Mutation process
 
-![MutationRe](https://github.com/AbdullahTaher93/TFM/blob/master/images/MutationRe.png)
+![MutationRe](https://github.com/AbdullahTaher93/TFM/blob/master/images/MutationRes.png)
 
 ##### Table of population after applying Mutation process
 
-![beforeMutation](https://github.com/AbdullahTaher93/TFM/blob/master/images/breforeMutation.png)
+![beforeMutation](https://github.com/AbdullahTaher93/TFM/blob/master/images/beforeMutation.png)
