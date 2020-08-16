@@ -299,7 +299,7 @@ finally, it will marriage the arrays and keep them into [newpopulionKey](https:/
 ##### Table of population after applying Mutation process
 
 ![beforeMutation](https://github.com/AbdullahTaher93/TFM/blob/master/images/beforeMutation.png)
-<<<<<<< HEAD
+
 
 ### Finally
 finally, when we ensure every class and every method in that class works correctly and After we got the new population, so we can reapply our GAs form the Transposition step on the new generation and the Termination Condition is When we reach a max number of iterations.
@@ -315,5 +315,4 @@ finally, when we ensure every class and every method in that class works correct
 
 
 
-=======
->>>>>>> e38a74f372d4457e0aa5770c6ed601ed63196723
+
