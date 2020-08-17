@@ -20,8 +20,8 @@ public class MutationTest {
     
     public MutationTest() {
         Population population=new Population(12,6);
-        Transpostion transpostion=new Transpostion(population.population, "ciphertest");
-         Fitness fitness=new Fitness(transpostion.ArrOfPlain, population.population);
+        Transpostion transpostion=new Transpostion(population.population, "ciphertest","");
+         Fitness fitness=new Fitness(transpostion.ArrOfPlain);
          Selection s=new Selection(fitness.fi, transpostion.ArrOfPlain, population.population);
          CrossOver crossOver=new CrossOver(s.seleckey, s.selecplain,0,true);
          Mutation m=new Mutation(crossOver.newpopulionPlaint, crossOver.newpopulionKey,70);
