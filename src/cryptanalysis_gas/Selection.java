@@ -32,8 +32,7 @@ public class Selection {
     Shell_Sort(Fitness,PlainText);
     for(int i=0;i<Key.length;i++)
          {
-             for(int j=0;j<Key[i].length;j++)
-              keywithsort[i][j]=Key[indexofkey[i]][j];   
+        System.arraycopy(Key[indexofkey[i]], 0, keywithsort[i], 0, Key[i].length);   
          }
     Selection_Method(PlainText);
     Print(Fitness,PlainText);
@@ -44,7 +43,7 @@ public class Selection {
         double x;
         String y;
         for(int i=h;i>=0;i--)
-    {
+            {
         for(int j=0;i+j<Fitness.length;j++)
         if(Fitness[j]>Fitness[j+i])
         {
@@ -91,11 +90,13 @@ public class Selection {
             System.out.print("\n");
             }
        System.out.print("\n");
-       int k=Fitness.length-1;
+       
+       System.out.print("\n *** best half of Population ***\n");
+       System.out.print(" ------------------------------------------\n");  
        for(int i=0;i<Fitness.length/2;i++){
             for(int j=0;j<Fitness.length/2;j++)
             System.out.print(" "+seleckey[i][j]+" ");
-            k--;
+        
             System.out.print("\n");
              }
        System.out.print("\n");
