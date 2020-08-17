@@ -21,7 +21,7 @@ public class TranspostionTest {
     Transpostion transpostion;
     public TranspostionTest() {
         population=new Population(12,6);
-        transpostion=new Transpostion(population.population, "ciphertest");
+        transpostion=new Transpostion(population.population,  "ichpreettsxx","ciphertestxx");
         
     }
     
