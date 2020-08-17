@@ -21,8 +21,8 @@ public class FitnessTest {
     Transpostion transpostion;
     public FitnessTest() {
         Population population=new Population(12,6);
-         transpostion=new Transpostion(population.population, "ciphertest");
-         fitness=new Fitness(transpostion.ArrOfPlain, population.population);
+         transpostion=new Transpostion(population.population, "ichpreettsxx","ciphertestxx");
+         fitness=new Fitness(transpostion.ArrOfPlain);
     }
     
     @BeforeClass
