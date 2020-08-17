@@ -5,6 +5,8 @@
  */
 package cryptanalysis_gas;
 
+import java.util.Arrays;
+
 /**
  *
  * @author Abdullah_PC
@@ -42,7 +44,7 @@ double [] ThreeCharVale={1.81,0.31,0.24,0.73,0.31,0.24,0.72,0.30,0.24,0.42,0.28,
  double fi[];
  String sub_Of_TwoChars,sub_Of_ThreeChars="";
 
-    public Fitness(String[] Array_Of_PlainText,int key[][]) {
+    public Fitness(String[] Array_Of_PlainText) {
         
         Twocharcount=new int[Array_Of_PlainText.length][Twochar.length];
         Threecharcount=new int[Array_Of_PlainText.length][Threechar.length];
@@ -52,7 +54,7 @@ double [] ThreeCharVale={1.81,0.31,0.24,0.73,0.31,0.24,0.72,0.30,0.24,0.42,0.28,
         
         FitnessMethod( Array_Of_PlainText);
         fitnessequation(Array_Of_PlainText.length);
-       // print();
+        print();
         
          
         
@@ -60,19 +62,15 @@ double [] ThreeCharVale={1.81,0.31,0.24,0.73,0.31,0.24,0.72,0.30,0.24,0.42,0.28,
     }
     private void FitnessMethod(String[] Array_Of_PlainText) {
         //init 0 to arraies of count Twochars and Threechars
-        for(int i=0;i<Array_Of_PlainText.length;i++){
         
-            for(int j=0;j<Twocharcount[i].length;j++)
-                   Twocharcount[i][j]=0;
-            for(int j=0;j<Threecharcount[i].length;j++)
-                      Threecharcount[i][j]=0;
-        
-    }
+        Arrays.fill(Twocharcount,0,0,0);
+        Arrays.fill(Threecharcount,0,0,0);
+       
       for(int k=0;k<Array_Of_PlainText.length;k++){
         for(int i=0;i<Array_Of_PlainText[k].length()-1;i++)
         {
             if(k==0)
-                CountOfSubTxTOf2++;
+             CountOfSubTxTOf2++;
            sub_Of_TwoChars="";
            sub_Of_TwoChars=sub_Of_TwoChars+Array_Of_PlainText[k].charAt(i)+Array_Of_PlainText[k].charAt(i+1);
            checktwoChars(sub_Of_TwoChars,k);
@@ -130,10 +128,9 @@ double [] ThreeCharVale={1.81,0.31,0.24,0.73,0.31,0.24,0.72,0.30,0.24,0.42,0.28,
     
     public void fitnessequation(int Array_Of_PlainTextLength){
       double d=0;
-      for(int i=0;i<SumTwochar.length;i++)
-               SumTwochar[i]=0;
-      for(int i=0;i<SumThreechar.length;i++)
-          SumThreechar[i]=0;
+      Arrays.fill(SumTwochar,0);
+      Arrays.fill(SumThreechar,0);
+      
       
       for(int i=0;i<Array_Of_PlainTextLength;i++){
         for(int j=0;j<Twochar.length;j++)
@@ -141,9 +138,11 @@ double [] ThreeCharVale={1.81,0.31,0.24,0.73,0.31,0.24,0.72,0.30,0.24,0.42,0.28,
                 {
                  d=(double)(Twocharcount[i][j]/CountOfSubTxTOf2);
                  SumTwochar[i]=SumTwochar[i]+TwoCharVale[j]-d;
+                 d=(double)(Threecharcount[i][j]/CountOfSubTxTOf3);
+                 SumThreechar[i]=SumThreechar[i]+ThreeCharVale[j]-d;
                 }
      }
-     for(int i=0;i<Array_Of_PlainTextLength;i++){
+    /* for(int i=0;i<Array_Of_PlainTextLength;i++){
         for(int j=0;j<Threechar.length;j++)
                  if(Threecharcount[i][j]!=0)
                  {
@@ -151,8 +150,8 @@ double [] ThreeCharVale={1.81,0.31,0.24,0.73,0.31,0.24,0.72,0.30,0.24,0.42,0.28,
                   SumThreechar[i]=SumThreechar[i]+ThreeCharVale[j]-d;
                  }
           
-     }
-    for(int i=0;i<SumTwochar.length;i++){
+     }*/
+    for(int i=0;i<fi.length;i++){
        fi[i]=(double)SumTwochar[i]+SumThreechar[i];
     }
         
