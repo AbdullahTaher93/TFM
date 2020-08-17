@@ -21,8 +21,8 @@ public class SelectionTest {
     Transpostion transpostion;
     public SelectionTest() {
         Population population=new Population(12,6);
-         transpostion=new Transpostion(population.population, "ciphertest");
-         fitness=new Fitness(transpostion.ArrOfPlain, population.population);
+         transpostion=new Transpostion(population.population,  "ichpreettsxx","ciphertestxx");
+         fitness=new Fitness(transpostion.ArrOfPlain);
          Selection s=new Selection(fitness.fi, transpostion.ArrOfPlain, population.population);
     }
     
