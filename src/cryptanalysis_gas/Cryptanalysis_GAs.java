@@ -20,23 +20,23 @@ public class Cryptanalysis_GAs {
      //0= My crossOver
      //1= onepoint Crossover
      //2= Davis_Order
-     static int type_of_crossOver=1;
+     static int type_of_crossOver=2;
      //true= keeps best half parents into next generation
-    static  boolean keeps_parents=false;
+    static  boolean keeps_parents=true;
      //ratio of matution from 100
-    static  int mutation_ratio=70;
+    static  int mutation_ratio=100;
     static String Crossover_Operator="";
     
     public static void main(String[] args) {
         // TODO code application logic here
         int itrations=0;
         int no_of_population=0;
-        
+        long startTime = System.currentTimeMillis();
         Population population=new Population(16,8);
         keys=new int[population.population.length][population.population[0].length];
         keys=population.population;
-        String cipherText="nm yame ailsbdu  leatahh'rn m iImfooatirnnX g.XE";
-        String PlainText="my name is abdullah";
+        String cipherText="tlipsoha";
+        String PlainText= "hospital";
         boolean flag=false;
         itrations++;
         
@@ -49,7 +49,7 @@ public class Cryptanalysis_GAs {
         transpostion=new Transpostion(keys, cipherText,PlainText);
         flag=transpostion.flag;
         if(flag!=true){
-         fitness=new Fitness(transpostion.ArrOfPlain, keys);
+         fitness=new Fitness(transpostion.ArrOfPlain);
          selection=new Selection(fitness.fi, transpostion.ArrOfPlain, keys);
         
         crossOver=new CrossOver(selection.seleckey, selection.selecplain,type_of_crossOver, keeps_parents);
@@ -62,21 +62,21 @@ public class Cryptanalysis_GAs {
                     
                         
                         
-                        System.out.println("***Fixed Period d With a Permutation Function Transposition Cipher***");
+                        //System.out.println("***Fixed Period d With a Permutation Function Transposition Cipher***");
                         Transpostion Tr=new Transpostion(keys,cipherText,PlainText);
                         itrations++;
                         no_of_population=itrations*population.population.length;
                         flag=Tr.flag;
                         if(flag!=true){
                         System.out.println("***Step Two From Genetics Algorithm Evaluation Fitness***");
-                        Fitness fit=new Fitness(Tr.ArrOfPlain,keys);
-                        System.out.print("***Step Three From Genetic Algorithm Selection Operation Top 6***\n");
-                        System.out.println("***Sorted Plaintext And key And Fitness From High To Low By High Fitness***");
+                        Fitness fit=new Fitness(Tr.ArrOfPlain);
+                       // System.out.print("***Step Three From Genetic Algorithm Selection Operation Top 6***\n");
+                       // System.out.println("***Sorted Plaintext And key And Fitness From High To Low By High Fitness***");
                         Selection ss=new Selection(fit.fi,Tr.ArrOfPlain,keys);
-                        System.out.println("***Step Foure From Genetics Algorithm Recombination (Crossover) Operation ***");
+                       // System.out.println("***Step Foure From Genetics Algorithm Recombination (Crossover) Operation ***");
                         CrossOver cross=new CrossOver(ss.seleckey,ss.selecplain,type_of_crossOver, keeps_parents);
                         
-                        System.out.println("***Step Five From Genetics Algorithm Mutation Operation***");
+                       // System.out.println("***Step Five From Genetics Algorithm Mutation Operation***");
                         Mutation mm=new Mutation(cross.newpopulionPlaint,cross.newpopulionKey,mutation_ratio);
                         keys=mm.key;
                         //crossOver.newpopulionKey=cross.newpopulionKey;
@@ -87,15 +87,17 @@ public class Cryptanalysis_GAs {
                         
                         else{
                             System.out.println();
-                           System.out.println("itrations= "+itrations+"\nno of the population= "+no_of_population+"\nCrossover Operator: "+Crossover_Operator+"\nKeeps best parent to next Population: "+keeps_parents+"\nMutation Ratio: "+mutation_ratio+"%"); 
+                            long endTime = System.currentTimeMillis();
+                           System.out.println("itrations= "+itrations+"\nno of the population= "+no_of_population+"\nCrossover Operator: "+Crossover_Operator+"\nKeeps best parent to next Population: "+keeps_parents+"\nMutation Ratio: "+mutation_ratio+"%\n Time: " + (endTime - startTime) + " sec"); 
+                        break;
                         }
                           
                    
            }while(flag==false);
             }else{
            System.out.println();
-           
-           System.out.println("itrations= "+itrations+"\nno of the population= "+no_of_population+"\nCrossover Operator: "+Crossover_Operator+"\nKeeps best parent to next Population: "+keeps_parents+"\nMutation Ratio: "+mutation_ratio+"%"); 
+           long endTime = System.currentTimeMillis();
+           System.out.println("itrations= "+itrations+"\nno of the population= "+no_of_population+"\nCrossover Operator: "+Crossover_Operator+"\nKeeps best parent to next Population: "+keeps_parents+"\nMutation Ratio: "+mutation_ratio+"%\n Time: " + (endTime - startTime)+ " sec"); 
         }
     }
     
