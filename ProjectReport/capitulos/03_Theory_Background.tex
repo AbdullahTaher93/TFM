@@ -76,7 +76,7 @@ Ciphertext is encrypted text transformed from plaintext using an encryption algo
 The term cipher is sometimes used as a synonym for ciphertext. However, it refers to the method of encryption rather than the result.
 
 \subsection{Types of ciphers}
-There are various types of ciphers but We are focusing on only of them related to the work done , including:
+There are various types of ciphers but We are focusing on only two of them that related to the work done , including:
 
 \subsubsection{Transposition Cipher}
 The transposition cipher is rearranged (change position only) the characters in the message but not change the characters. Transposition cipher have a pool of keys and ciphertext that rearranged the ciphertext for M times depended on the pool of keys. The output of transposition cipher saved in array of M locations we can called it \textit{plaintextArray}.
@@ -140,17 +140,21 @@ The genetic Algorithm has six steps which can evolve solutions to the search pro
 The initial population of candidate solutions is usually generated
 randomly across the search space. However, domain-specific knowledge or other
 information can be easily incorporated in the generation of the initial population.
+The population is usually defined as a two dimensional array of size population, size x , chromosome size.
+There are two primary methods to initialize a population in a GA. They are:
+\subsubsection{Random Initialization:} Populate the initial population with completely random solutions.
+\subsubsection{Heuristic initialization:} Populate the initial population using a known heuristic for the problem
 
 \subsubsection{Evaluation(Fitness):}
 Once the population is initialized, or an offspring population is created, the fitness values of the candidate solutions are evaluated.
 A fitness function should possess the following characteristics:
-
 \begin{enumerate}
     \item{The fitness function should be sufficiently fast to compute.}
     \item{It must quantitatively measure how fit a given solution is or how fit individuals can be produced from the given solution.}
 \end{enumerate}
 
-\subsubsection{Selection:} Selection allocates more copies to solutions with better fitness values and thus imposes the survival-of-the-fittest mechanism on the candidate solutions. The main idea of selection is to prefer better solutions to worse ones, and many selection procedures have been proposed to accomplish this idea, 
+\subsubsection{Selection:} 
+Selection allocates more copies to solutions with better fitness values and thus imposes the survival-of-the-fittest mechanism on the candidate solutions. The main idea of selection is to prefer better solutions to worse ones, and many selection procedures have been proposed to accomplish this idea, 
 \subsubsection{Recombination(Crossover):}
 Recombination combines bits and pieces of two or more parental solutions to create new, possibly better solutions (i.e. offspring). There are many ways of accomplishing this, and achieving competent performance depends on getting the recombination mechanism designed properly; but the primary idea to keep in mind is
 that the offspring under recombination will not be identical to any particular parent and will instead combine parental traits in a novel manner \cite{goldberg1999using}.
