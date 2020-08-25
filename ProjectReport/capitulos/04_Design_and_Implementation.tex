@@ -1,3 +1,4 @@
+
 \chapter{Design and Implementation of Proposed Work}
 This chapter will show the architectural, Algorithm, and class diagrams of the application,In this chapter also, the implementation of the proposed work will be explained which shows how genetic algorithm approach can be applied to cryptanalysis task, which does not have clear solution except for exhaustive search: breaking the Transposition and substitution cipher.
 In this work, cryptanalysis used GA for searching the decryption key or getting maximum information about the decryption key. The Genetic Algorithm is a search and optimization techniques based On Darwin is the Principle of Natural Selection,
@@ -179,3 +180,21 @@ under this class Mutation.java we will mutate the gene, where We can determine a
      so, chromosome = \textsf{2} 5 3 6 4 \textsf{1} }
     \end{tcolorbox}
 Then we can call Print method to print the array of population after mutation process.
+\section{Testing with JUnit Tests in NetBeans IDE}
+JUnit is a simple, free and open source framework to write repeatable unit tests using Java. Erick Gamma and Kert Beck originally wrote it. It is a regression-testing framework, which allows the developer to write code faster with high quality. JUnit tests increase the stability of the software.
+The main philosophy behind this testing framework is to make coding and testing move hand in hand.
+we  applied this philosophy of testing and coding side by side to an object-oriented version of our program by creating a test case for it in NetBeans IDE. NetBeans IDE is the official IDE for Java 8 for development of desktop applications,after we ensure that all of the tests are working correctly then we create a \textit{.travis.yml} file to make our tests run on travis-ci.
+the \textit{.travis.yml} file contents:
+  \begin{tcolorbox}[breakable,notitle,boxrule=0pt,colback=blue!20,colframe=blue!20]
+    { language: java\\
+    addons:\\
+      apt:\\
+        packages:\\
+          - openjdk-8-jdk\\
+    jdk:\\
+      - openjdk8\\
+    before-install:\\
+        - sudo apt-get -qq update\\
+        - sudo apt-get install ant-optional\\
+    }
+    \end{tcolorbox}
