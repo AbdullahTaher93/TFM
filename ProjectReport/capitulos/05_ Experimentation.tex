@@ -1,0 +1,46 @@
+\chapter{Experimentation}
+In this chapter, we will write all the issues related to the experimentation phase of the study, from the first decision-making to the last decision-making to validate the solutions. Throughout the following paragraphs, Arguments will be presented in defense of the decisions to be made and a sufficiently detailed description of the experiment will be presented so that the results can be easily interpreted.in this chapter we will get experimental results for each step of the application from population steps to mutation steps with giving the details of each step And make comparisons of the experimental results, These experiments are divided into two parts that depend on the cipher type.
+so, we have two stages of the experimentation, which are:
+
+\section{experimentation of Transposition Cipher}
+In this part of the work, we will make experiments for the working steps performed to each step of GAs of Transposition cipher.
+\subsection{experimentation of population step}
+In this part of the work, we will make experiments for the working steps performed to each step of GAs of Transposition cipher.
+in this section, we will make an experiment to generate a set of chromosomes(individuals) which represent the first population,  in this case, each chromosome has a set of numbers which represent DNA Which can not be repeated in another chromosome, for each problem, there is different chromosome type that we can define the chromosome (also sometimes called a genotype) is a set of parameters which define a proposed solution to the problem that the genetic algorithm is trying to solve. The set of all solutions is known as the population. The chromosome is often represented as a binary string, although a wide variety of other data structures are also used \cite{IVGeneticAlgorithm}.\\
+\input{EXperimenats/Tr12-6/popultaion.tex}
+\input{EXperimenats/Tr20-6/population.tex}
+\newpage
+\subsection{experimentation of Transposition Cipher step}
+in this section, we will try to break the ciphertext by using the decoding Transposition Algorithm to get the experimental results which will be:
+\input{EXperimenats/Tr12-6/breaking.tex}
+\input{EXperimenats/Tr20-6/breaking.tex}
+\newpage
+\subsection{experimentation of Fitness step}
+now, we will get the preliminary experimental results to fitness step which will be:\\
+\input{EXperimenats/Tr12-6/Fitness.tex}
+\input{EXperimenats/Tr20-6/Fitness.tex}
+\newpage
+\subsection{experimentation of Selection step}
+in experimentation of Selection steps, we will get the data are sorted depending on fitness values then we will select the best chromosomes:
+\input{EXperimenats/Tr12-6/Selection.tex}
+\input{EXperimenats/Tr20-6/Selection.tex}
+\newpage
+\subsection{experimentation of CrossOver step}
+in this section, we will make a set of experiments to test every CrossOver operator, in the first part of the experiments will be applied, one crossover operator on the best parents to get half of the next population then mix those parents with their children to generate population completely, and in the second part of the experiments we will applied two Crossover operatores on the best parents  to generate population completely without keeping those parents to next generation, the experiments be:\\
+\input{EXperimenats/Tr12-6/CrossOver.tex}
+\input{EXperimenats/Tr20-6/CrossOver.tex}
+\newpage
+\subsection{experimentation of Mutation step}
+At this stage, we will obtain the experimental results after the mutation process to obtain the final population that will continue to live to form other generations, the experimental results be:\\
+\input{EXperimenats/Tr12-6/Mutation.tex}
+\input{EXperimenats/Tr20-6/Mutation.tex}
+\newpage
+
+
+\section{experimentation of Substitution Cipher}
+\subsection{experimentation of population step}
+\subsection{experimentation of Substitution Cipher step}
+\subsection{experimentation of Fitness step}
+\subsection{experimentation of Selection step}
+\subsection{experimentation of CrossOver step}
+\subsection{experimentation of Mutation step}

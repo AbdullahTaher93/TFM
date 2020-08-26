@@ -1,0 +1,113 @@
+\subsubsection{Experimental results:}
+\begin{tcolorbox}[breakable,notitle,boxrule=0pt,colback=blue!20,colframe=blue!20]
+    { No. of chromosomes is: 12\\
+    length of chromosome is: 6\\
+    Cipher Type=Transipostion Cipher
+    }
+    \end{tcolorbox}
+\begin{table}[h!]
+\centering
+\includegraphics[width=0.8\textwidth]{imagenes/TranspositionKeys.png}\\
+\caption{Sample of Transipostion Keys}
+\end{table}
+\begin{tcolorbox}[breakable,notitle,boxrule=0pt,colback=blue!20,colframe=blue!20]
+{ No. of chromosomes is: 16\\
+    length of chromosome is: 8\\
+    Cipher Type=Transipostion Cipher
+    }
+    \end{tcolorbox}
+\begin{table}[h!]
+\centering
+\includegraphics[width=0.8\textwidth]{imagenes/TranspositionKeys.png}\\
+\caption{Sample of Transipostion Keys}
+\end{table}
+
+\begin{tcolorbox}[breakable,notitle,boxrule=0pt,colback=blue!20,colframe=blue!20]
+    { No. of chromosomes is: 12\\
+    Cipher Type=Substitution Cipher
+    }
+    \end{tcolorbox}
+\begin{table}[h!]
+\centering
+\includegraphics[width=0.8\textwidth]{imagenes/substitutionKeys.png}\\
+\caption{Sample of Substitution Keys}
+\end{table}
+____________________________________________________________________________________________
+
+\subsubsection{Experimental results:}
+    \begin{tcolorbox}[breakable,notitle,boxrule=0pt,colback=blue!20,colframe=blue!20]
+        { No. of chromosomes is: 12\\
+        length of chromosome is: 6\\
+         CipherText=pnTsarotoiisepnhiCXXrXXX\\
+         Plaintext=TranspositionCipher\\
+        Cipher Type=Transipostion Cipher
+        }
+        \end{tcolorbox}
+    \begin{table}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{imagenes/TranspositionCipher.png}\\
+    \caption{Sample of breaking Transip\subsubsection{Experimental results:}
+    \begin{tcolorbox}[breakable,notitle,boxrule=0pt,colback=blue!20,colframe=blue!20]
+        { No. of chromosomes is: 12\\
+         CipherText=KJPKTXTJTXCAQXORWU\\
+         Plaintext=SUBSTITUTIONCIPHER\\
+        Cipher Type=Substitution Cipher
+        }
+        \end{tcolorbox}
+    \begin{table}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{imagenes/substitutionCipher.png}\\
+    \caption{Sample of breaking Substitution Cipher}
+    \end{table}
+ostion Cipher}
+    \end{table}
+____________________________________________________________________________________________
+\subsubsection{Experimental results:}
+    \begin{tcolorbox}[breakable,notitle,boxrule=0pt,colback=blue!20,colframe=blue!20]
+        { No. of chromosomes is: 12\\
+         CipherText=KJPKTXTJTXCAQXORWU\\
+         Plaintext=SUBSTITUTIONCIPHER\\
+        Cipher Type=Substitution Cipher
+        }
+        \end{tcolorbox}
+    \begin{table}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{imagenes/substitutionCipherfitness.png}\\
+    \caption{Sample of Fitness values for Substitution Cipher}
+    \end{table}
+
+____________________________________________________________________________________________
+\subsubsection{Experimental results:}
+    \begin{tcolorbox}[breakable,notitle,boxrule=0pt,colback=blue!20,colframe=blue!20]
+        { No. of chromosomes is: 12\\
+         CipherText=KJPKTXTJTXCAQXORWU\\
+         Plaintext=SUBSTITUTIONCIPHER\\
+        Cipher Type=Substitution Cipher
+        }
+        \end{tcolorbox}
+    \begin{table}[h!]
+    \centering
+    \includegraphics[width=0.6\textwidth]{imagenes/selectionwithsubstitution.png}\\
+    \caption{bast half population for Substitution Cipher}
+    \end{table}
+
+____________________________________________________________________________________________
+\newpage
+\subsubsection{Experimental results:}
+    \begin{tcolorbox}[breakable,notitle,boxrule=0pt,colback=blue!20,colframe=blue!20]
+        { No. of chromosomes is: 12\\
+         CipherText=KJPKTXTJTXCAQXORWU\\
+         Plaintext=SUBSTITUTIONCIPHER\\
+        Cipher Type=Substitution Cipher\\
+        CrossOver Operator: one point, the point is chosed randomly\\
+        Keeps best parent to next Population: true\\
+        }
+        \end{tcolorbox}
+    \begin{table}[h!]
+    \centering
+    \includegraphics[width=0.5\textwidth]{imagenes/onepointSubstitution.png}\\
+    \caption{onePoint Crossover operator  for Substitution Cipher}
+    \end{table}
+
+
+\newpage
