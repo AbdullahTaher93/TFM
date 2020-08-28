@@ -5,13 +5,90 @@ in this chapter, we will obtain the final result of the application in the previ
  \subsection{Diplay the Final results of Transposition Cipher}
  \input{results/Tr.tex}
  By the results we obtained concerning the Transposition Cipher, We notice that the process of breaking the encrypted text gets more difficult with the increase in the key length,so we see when the key  length was 6 bits we only needed very small fractions of a second to break that key, and when the key  length became 8 bits it took more time that the search time reached a half-second, and when the key length was 12 bits, the search time becomes half a minute, which indicates what we have talked about that the length of the key is directly proportional to the search time,we can also notice that the variety of methods of generating a new population made the application more flexible, which led to giving good results, as we note that the best result we got and the worst result we got for each test, there was a big difference between them, as we notice in the best result has a method of generating new population different from the worst result,If we assume that we decided from the beginning to use one method to generate the new generation and that method did not give good results, or perhaps we thought it was the best because we did not try other methods, which makes obtaining the best results incomplete.
+ \subsection{Diplay the Final results of Substitution Cipher}
+ \input{results/Sub.tex}
+ After we followed the same methods that we used to break the transposition cipher that achieved so good result, we reused the same way to break the substitution cipher but that did not achieve the same wanted results, we tried enhance the fitness rate values that was not working,also we tried converting the Crossover methods and mutation rate and was the same result, that means following the same way for them will not a good idea, the got result was not so bad that we recovered 12 bit from cipher key in 30.349 which is not bad, but that not so good too, that makes the path that we have followed it to break Substitution cipher was not so good and it did not give us best results which make these methods Accredited to break substitution cipher, in other side, the our GAs which we used to break Transposition cipher was so good and achieved high results. 
  \section{Comparison of Results}
  In the algorithm proposed by A. Dimovski and D.
-Gligoroski, [1] the recovered key for 1000 letters in
+Gligoroski \cite{dimovski2003attacks},the recovered key for 1000 letters in
 ciphertext amount is 13.25 out of 15 key length. In R. Toemeh \cite{toemeh2007breaking} proposed algorithm the recovered key is 15 for the same
 amount of ciphertext. So for this size of ciphertext and for
 key size 15 the improvement is 13 percent. The time for
 breaking the key is less than the time in the Brute Force
 attack because the number of possible keys for a
 transposition cipher with N key size is N! (factorial), in our proposed algorithm recovered the  key lengths 6, 10 and 12 are less than the time R. Toemeh attack, where we recovered key is 6 just in 0.004 (sec),
-10 just in 0.323(sec) where he recovered it in 6.45 (sec), 6 seconds the difference between them.
+10 just in 0.323(sec) where he recovered it in 6.45 (sec), 6 seconds the difference between them,As for substitution cipher that There are kinds of fitness functions used by other students in
+the past. Some use dictionaries to pull out words and add the
+number found \cite{oranchak2008evolutionary}\cite{morelli2003word}. The most popular fitness function uses
+gram statistics, but the implementation and statistics differ from
+author to author. Some use a big number of grams while
+others only use a few. Some use only unigram and bigrams
+while others use bigrams and trigrams
+\cite{clark1998optimisation}\cite{spillman1993use}.
+and I found related work by Derrick Erickson and Michael Hausman in thier project A Dominant Gene Genetic Algorithm for a
+Substitution Cipher in Cryptography\cite{ericksondominant} which they used a custom gram program. This gram program reads the
+input text, which is the bible, and returns the top unigram,
+bigram, trigram, and four-grams. Then the author uses the
+same process on the encrypted text. The top grams in the
+encrypted message would be the same as the top grams in the
+statistics. For example, the top trigram in the encrypted text
+could be "xbw," which would represent "the" according to the
+statistics.
+
+\begin{table}[H]
+    \centering
+
+    \begin{tabular}{|l|l|}
+    \hline
+    Gram & Score       \\ \hline
+    e    & 1           \\ \hline
+    t    & 0.686449195 \\ \hline
+    o    & 0.648787116 \\ \hline
+    …    & …           \\ \hline
+    th   & 200         \\ \hline
+    he   & 185.2286915 \\ \hline
+    an   & 88.3373248  \\ \hline
+    …    & …           \\ \hline
+    the  & 300         \\ \hline
+    and  & 112.6185938 \\ \hline
+    you  & 73.82056059 \\ \hline
+    …    & …           \\ \hline
+    will & 400         \\ \hline
+    nthe & 389.8032989 \\ \hline
+    …    & …           \\ \hline
+    \end{tabular}
+    \caption{Statistics used for initial chromosome generation}
+    \end{table}
+and Two chromosomes that only use unigram statistics would be approximately or completely the same. The same is true for
+two chromosomes that use the bigram statistics. The bigram
+solutions, however, will not necessarily be the same as the
+unigram statistics. In most cases, however, “unigram” and
+“bigram” solutions are different. Therefore, the author uses
+the proportions below. The Genetic Algorithm uses a small
+proportion for each of the different gram statistics. A majority
+of the chromosomes are random give the Genetic Algorithm a
+chance to find any solution.
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|l|l|}
+    \hline
+    Way to Create Chromosome & Percentage \\ \hline
+    Unigram Statistics       & 10\%       \\ \hline
+    Bigram Statistics        & 10\%       \\ \hline
+    Trigram Statistics       & 10\%       \\ \hline
+    Four-Gram Statistics     & 10\%       \\ \hline
+    Random                   & 60\%       \\ \hline
+    \end{tabular}
+    \caption{Proportions for initial chromosome creation}
+    \end{table}
+    and Two chromosomes that only use unigram statistics would be nearly or completely the same. The same is true for
+two chromosomes that use the bigram statistics. The bigram
+solutions, however, will not necessarily be the same as the
+unigram statistics. In most cases, however, “unigram” and
+“bigram” solutions are different. Therefore, the author uses
+the proportions below. The Genetic Algorithm uses a small
+proportion for each of the different gram statistics. A majority
+of the chromosomes are random give the Genetic Algorithm a
+chance to find any solution.
+they achieved so good results, with their path work, Than we observe that our deciding which we have done it to calculate fitness was so good with Transposition cipher and was not with a substitution cipher where they achieved average percent of Cipher Text Correct 79.76
+While we achieved average percent of Cipher Text Correct 46.15 using 600 letters.
