@@ -84,11 +84,18 @@ A simple transposition or permutation cipher works by breaking a message into fi
 
 In Table \ref{table:1} shows the key and the encryption process of the previously described transposition cipher. It can be noticed that the random string "X" was appended to the end of the message to enforce a message length, which is a multiple of the block size.It is also clear that thedecryption can be achieved by following the same process as encryption using the "inverse" of the encryption permutation. In this case the decryption key, P-1 is equal to {6,4,10,3,7,9,1,5, 8,2}.
 
-\begin{table}[h!]
-\includegraphics[width=0.9\textwidth]{imagenes/Transposition.png}\\
-\caption{Transposition Cipher Example}
-\label{table:1}
-\end{table}
+\begin{table}[H]
+    \begin{tabular}{|
+    >{\columncolor[HTML]{FFFFFF}}l |}
+    \hline
+    \textbf{Key:}                                                                                                                                                                                  \\ \hline
+    \begin{tabular}[c]{@{}l@{}}PlainText:    1 2 3 4 5 6 7 8 9 10\\ CipherText: 7   10 4 2 8 1 5 9 6 3\end{tabular}                                                                                \\ \hline
+    \textbf{Encryption:}                                                                                                                                                                           \\ \hline
+    \begin{tabular}[c]{@{}l@{}}Position:       123456789\textbf{10} 123456789\textbf{10}  123456789\textbf{10}\\ PlainText:    TRAISPNSTOIONROL\_AIGTHMXXXXXXX   \\ CipherText: OTNRSTSIPAGI\_OOIARLNXXXHXTXXXM\end{tabular} \\ \hline
+    \end{tabular}
+    \label{table:1}
+    \caption{Encryption example of Transposition Cipher.}
+    \end{table}
 \newpage
 \subsubsection{Substitution Cipher}
 A cipher is an algorithm for encrypting plain text into cipher text and vice versa. The substitution cipher replaces every instance of a particular letter in the plain text with a different letter from the cipher text. Thus a substitution cipher key can be defined as the set of one-to-one mappings relating every letter in the plain text alphabet with the corresponding letter in cipher text alphabet. Such a key is normally defined using a table \ref{table:2}  and an example key is included below.

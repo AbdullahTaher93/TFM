@@ -1,0 +1,123 @@
+
+
+Ti= (0.0) (0.0) (2.92) (0.0) (0.0) (0.83) (2.49) (1.8) (2.04) (0.89) (0.0) (0.0) (4.1) (1.06) (1.32) (0.88) (2.03) (0.0) (0.88) (2.66) (0.0) (0.0) (0.0) (1.32) 
+Di= (0.0) (0.0) (0.78) (0.0) (0.0) (0.21) (0.6599999999999999) (0.49) (0.54) (0.24) (0.0) (0.0) (1.07) (0.26) (0.33) (0.24) (0.72) (0.0) (0.24) (0.71) (0.0) (0.0) (0.0) (0.34) 
+                                      Fitness=Ti+Di               
+
+
+(Key With sort) & (Plain text with sort) & (Fitness Array with Sort)\\ \hline 
+ 
+
+
+ *** best half of Population ***
+ ------------------------------------------
+TQXUIEJONBYSZKPHCRAWDVGLFM
+MZBWGVILEQJAKSNRCHUOFPYXTD
+SLNGHABEDCOVQPMRXYWKFIUTJZ
+RWHLNQMEUDVZSOGBYKXPFTJACI
+UBRKAHQGOZPMNCTJWLFDSVIYEX
+ELGKODWTBANXPCRHVZJUQYFSIM
+JARUCOYVHBDTXISEFGZLKQWMNP
+ZMRQGOYLFBIJPEXDHVSWACKNTU
+NPAMLEXYHOQFVIZKBCWUSDTRGJ
+YCJWOQERHKXMPFVLINDSTUGZAB
+FSYPXBTCJZGHOVNIAWEQLDUMRK
+GTSLQFDOCAXZKEHYIBVPMRWUNJ
+
+child &TQWGIELJNBASZKHUCROPDVYXFM\\ \hline
+child &MZXUGVIJEQONKSBYCHRAFPWLTD\\ \hline
+child &SLRWHANMDCEUQPVOXYGBFIKTJZ\\ \hline
+child &RWLGNQHAUDBESOVPYKMXFTJZCI\\ \hline
+child &UBGKAHDTOZPRNCJQWLYFSVIMEX\\ \hline
+child &ELURODKHBAGNPCTJVZWFQYSXIM\\ \hline
+child &JAZMCORYHBLEXIDVFGSWKQTUNP\\ \hline
+child &ZMJRGOYDFBXIPESLHVKQACWNTU\\ \hline
+child &NPYWLEQRHOKXVIMFBCTUSDZAGJ\\ \hline
+child &YCMLOQEXHKVZPFWSINDRTUGJAB\\ \hline
+child &FSGTXBQCJZEHOVYIAWPMLDUNRK\\ \hline
+child &GTSYQFPXCAZHKEOVIBWLMRDUNJ\\ \hline
+child &TMZBWGVILEQJAKSNRCHUOFPYXD\\ \hline
+child &MTQXUIEJONBYSZKPHCRAWDVGLF\\ \hline
+child &SLNGHABEDCOVQPMRXYWUZKFTJI\\ \hline
+child &RWHLNQMEUDVZSOGBYKACPXFITJ\\ \hline
+child &UBRKAHQGOZPMNCTJELDWXVYFSI\\ \hline
+child &ELGKODWTBANXPCRHUQZMJFSVIY\\ \hline
+child &JARUCOYVHBZMQGLFIPEXDSWKNT\\ \hline
+child &ZMRQGOYLFBJAUCVHDTXISEKWNP\\ \hline
+child &NPAMYCJWOQERHKXFVLIDSTUGZB\\ \hline
+child &YCJWNPAMLEXHOQFVIZKBUSDTRG\\ \hline
+child &FSYPXBTCJZGHLQDOAKEIVMRWUN\\ \hline
+child &GTSLQFDOCAXZYPBJHVNIWEUMRK\\ \hline
+Key(1) Two random Postions= 23 , 3
+Key(2) Two random Postions= 23 , 3
+Key(3) Two random Postions= 23 , 3
+Key(4) Two random Postions= 23 , 3
+Key(5) Two random Postions= 23 , 3
+Key(6) Two random Postions= 23 , 3
+Key(7) Two random Postions= 23 , 3
+Key(8) Two random Postions= 23 , 3
+Key(9) Two random Postions= 23 , 3
+Key(10) Two random Postions= 23 , 3
+Key(11) Two random Postions= 23 , 3
+Key(12) Two random Postions= 23 , 3
+Key(13) Two random Postions= 23 , 3
+Key(14) Two random Postions= 23 , 3
+Key(15) Two random Postions= 23 , 3
+Key(16) Two random Postions= 23 , 3
+Key(17) Two random Postions= 23 , 3
+Key(18) Two random Postions= 23 , 3
+Key(19) Two random Postions= 23 , 3
+Key(20) Two random Postions= 23 , 3
+Key(21) Two random Postions= 23 , 3
+Key(22) Two random Postions= 23 , 3
+Key(23) Two random Postions= 23 , 3
+Key(24) Two random Postions= 23 , 3
+chromosome &TQYGIELJNBASZKHUCROPDVWXFM\\ \hline
+chromosome &MZWUGVIJEQONKSBYCHRAFPXLTD\\ \hline
+chromosome &SLKWHANMDCEUQPVOXYGBFIRTJZ\\ \hline
+chromosome &RWJGNQHAUDBESOVPYKMXFTLZCI\\ \hline
+chromosome &UBIKAHDTOZPRNCJQWLYFSVGMEX\\ \hline
+chromosome &ELSRODKHBAGNPCTJVZWFQYUXIM\\ \hline
+chromosome &JATMCORYHBLEXIDVFGSWKQZUNP\\ \hline
+chromosome &ZMWRGOYDFBXIPESLHVKQACJNTU\\ \hline
+chromosome &NPZWLEQRHOKXVIMFBCTUSDYAGJ\\ \hline
+chromosome &YCGLOQEXHKVZPFWSINDRTUMJAB\\ \hline
+chromosome &FSUTXBQCJZEHOVYIAWPMLDGNRK\\ \hline
+chromosome &GTDYQFPXCAZHKEOVIBWLMRSUNJ\\ \hline
+chromosome &TMPBWGVILEQJAKSNRCHUOFZYXD\\ \hline
+chromosome &MTVXUIEJONBYSZKPHCRAWDQGLF\\ \hline
+chromosome &SLFGHABEDCOVQPMRXYWUZKNTJI\\ \hline
+chromosome &RWFLNQMEUDVZSOGBYKACPXHITJ\\ \hline
+chromosome &UBYKAHQGOZPMNCTJELDWXVRFSI\\ \hline
+chromosome &ELSKODWTBANXPCRHUQZMJFGVIY\\ \hline
+chromosome &JAWUCOYVHBZMQGLFIPEXDSRKNT\\ \hline
+chromosome &ZMKQGOYLFBJAUCVHDTXISERWNP\\ \hline
+chromosome &NPUMYCJWOQERHKXFVLIDSTAGZB\\ \hline
+chromosome &YCDWNPAMLEXHOQFVIZKBUSJTRG\\ \hline
+chromosome &FSRPXBTCJZGHLQDOAKEIVMYWUN\\ \hline
+chromosome &GTULQFDOCAXZYPBJHVNIWESMRK\\ \hline
+PlainTex0 &ONTPRPUHOKIRKNHXUJNY\\ \hline
+PlainTex1 &REMAHAYBRSGHSEBLYJEW\\ \hline
+PlainTex2 &GDSBYBOVGPHYPDVTOMDK\\ \hline
+PlainTex3 &MURXKXPVMONKOUVZPAUJ\\ \hline
+PlainTex4 &YOUFLFQJYCALCOJMQTOI\\ \hline
+PlainTex5 &WBEFZFJTWCOZCBTXJHBS\\ \hline
+PlainTex6 &SHJWGWVDSICGIHDUVYHT\\ \hline
+PlainTex7 &KFZQVQLSKEGVEFSNLDFW\\ \hline
+PlainTex8 &THNUCUFMTILCIHMAFRHZ\\ \hline
+PlainTex9 &DHYRNRSWDFONFHWJSXHG\\ \hline
+PlainTex10 &PJFMWMIYPVXWVJYNICJU\\ \hline
+PlainTex11 &WCGLBLVOWEQBECOUVXCD\\ \hline
+PlainTex12 &HLTUCUNSHKWCKLSYNILP\\ \hline
+PlainTex13 &ROMACAPKRZUCZOKGPJOV\\ \hline
+PlainTex14 &WDSUYURMWPHYPDMTREDF\\ \hline
+PlainTex15 &AURCKCBGAONKOUGIBEUF\\ \hline
+PlainTex16 &DOUWLWJTDCALCOTFJGOY\\ \hline
+PlainTex17 &ZBEMQMHRZCOQCBRVHTBS\\ \hline
+PlainTex18 &EHJXPXFLEGCPGHLKFVHW\\ \hline
+PlainTex19 &XFZITIHVXCGTCFVWHLFK\\ \hline
+PlainTex20 &IONDLDFXIKYLKOXGFWOU\\ \hline
+PlainTex21 &KLYBZBVFKQNZQLFTVMLD\\ \hline
+PlainTex22 &EJFIKIODEQXKQJDWOCJR\\ \hline
+PlainTex23 &NCGIVIJBNPQVPCBMJOCU\\ \hline
+BUILD SUCCESSFUL (total time: 0 seconds)

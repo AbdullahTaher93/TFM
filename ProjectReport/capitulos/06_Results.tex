@@ -1,0 +1,17 @@
+\chapter{The Results}
+in this chapter, we will obtain the final result of the application in the previous chapter, we have tried to validate the result of every class as an individual  before skip to the next class and after completing the experimental results of every class, now we can make the application start a cycle process until achieving the best final result which represents that we have broken the ciphers keys or we were so close to reaching to the original cipher key, in this stage we will expose the final best and worst results which we have got then we discuss these results then we will give Strengths and weaknesses points of some of the articulated stages of the application and then we start making comparisons in terms of processing  speed  and methods of implementation with the results of previous authors,
+ so in this chapter, we present two parts which are:
+ \section{Display and discuss final results}
+ \subsection{Diplay the Final results of Transposition Cipher}
+ \input{results/Tr.tex}
+ By the results we obtained concerning the Transposition Cipher, We notice that the process of breaking the encrypted text gets more difficult with the increase in the key length,so we see when the key  length was 6 bits we only needed very small fractions of a second to break that key, and when the key  length became 8 bits it took more time that the search time reached a half-second, and when the key length was 12 bits, the search time becomes half a minute, which indicates what we have talked about that the length of the key is directly proportional to the search time,we can also notice that the variety of methods of generating a new population made the application more flexible, which led to giving good results, as we note that the best result we got and the worst result we got for each test, there was a big difference between them, as we notice in the best result has a method of generating new population different from the worst result,If we assume that we decided from the beginning to use one method to generate the new generation and that method did not give good results, or perhaps we thought it was the best because we did not try other methods, which makes obtaining the best results incomplete.
+ \section{Comparison of Results}
+ In the algorithm proposed by A. Dimovski and D.
+Gligoroski, [1] the recovered key for 1000 letters in
+ciphertext amount is 13.25 out of 15 key length. In R. Toemeh \cite{toemeh2007breaking} proposed algorithm the recovered key is 15 for the same
+amount of ciphertext. So for this size of ciphertext and for
+key size 15 the improvement is 13 percent. The time for
+breaking the key is less than the time in the Brute Force
+attack because the number of possible keys for a
+transposition cipher with N key size is N! (factorial), in our proposed algorithm recovered the  key lengths 6, 10 and 12 are less than the time R. Toemeh attack, where we recovered key is 6 just in 0.004 (sec),
+10 just in 0.323(sec) where he recovered it in 6.45 (sec), 6 seconds the difference between them.
