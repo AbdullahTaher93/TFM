@@ -1,12 +1,26 @@
 \chapter{Conclusions and Future Work}
 \section{Conclusions}
-Cryptanalysis is difficult to work that needs a fast and efficient method.GA is an efficient search method to find the best decryption key. The GA has a special performing in cryptanalysis because GA is used for searching.key and the key has the main condition that not repeated any element in the same key.
+Cryptanalysis is difficult to work that needs a fast and efficient method.
+GA is an efficient search method to find the best decryption key. Genetic Algorithm works very well for
+breaking the transposition cipher the GA has a special performing in cryptanalysis because GA is used for searching key and the key has the main condition that not repeated any element in the same key,the advantage is that the algorithm is faster.
+For future work there is need to
+implement adaptive mutation, crossover
+and fitness function with Quadgram(4-gram),Quintgram(5-gram) and penalties.
+The work was on traditional ciphers, including substitution and transposition ciphers. The teachings used in these ciphers form the grounds for several of the fashionable cryptosystems.
 In the following points, the main issues that were concluded from the
 implementation of the project are given:
 \begin{enumerate}
     \item{Genetic algorithm used in the cryptanalysis a good decision because The GAs better algorithm in searching for a solution.}
     \item {In the crossover, the operation used a proposed method because of the key generated as the main condition that each element has only one occurrence in each key.}
-    \item { Evaluating fitness depending on the terms unigram Bigram and Trigram in each plaintext after a transposition cipher is implemented.}
-    \item {All tests of the proposed work obtained the decryption key in the early rounds caused a good proposal for cryptanalysis.}
+    \item { Evaluating fitness depending on the terms unigram, Bigram and Trigram in each plaintext after a transposition cipher and substitution cipher is implemented.}
+    \item {All tests of the proposed work obtained the decryption key in the early iteration caused a good proposal for cryptanalysis.}
 
 \end{enumerate}
+\section{Future Work}
+\begin{itemize}
+    \item {There are many areas in which this work could be expanded. One of these is in the research of the results of fitness calculation. This method obtained the best results of the two ciphers used, yet does not look to be in extensive use. Applying this procedure to other problems may confirm usefully.}
+    \item {This work was coded in Java and used Netbeans. Re-working of the code to make it modular and re-usable for other projects would be a useful extension. }
+    \item {Comparison between the genetic algorithm and the practical swarm optimization (PSO) corresponding the optimality searching.}
+    \item {Attempt to study modern attacks based on GAs, like Cross Protocol/Downgrade Attack,where it sometimes transpires that two cryptographic protocols are applied side-by-side to secure the same asset, while one protocol is more vulnerable than the other.  The resulting order is then vulnerable to a cross-protocol attack, where points in the weaker protocol are exploited in order to yield the more energetic protocol.}
+\end{itemize}
+
